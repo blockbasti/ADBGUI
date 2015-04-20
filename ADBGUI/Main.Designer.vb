@@ -30,10 +30,10 @@ Partial Class Main
         Me.ProgressBar_Battery = New System.Windows.Forms.ToolStripProgressBar()
         Me.Label_Battery = New System.Windows.Forms.ToolStripStatusLabel()
         Me.TabControl1 = New System.Windows.Forms.TabControl()
-        Me.TabPage6 = New System.Windows.Forms.TabPage()
+        Me.TabPage_Device = New System.Windows.Forms.TabPage()
         Me.GroupBox4 = New System.Windows.Forms.GroupBox()
+        Me.Label_ownpath = New System.Windows.Forms.Label()
         Me.Label_device_ownpath = New System.Windows.Forms.Label()
-        Me.TextBox_OwnPath = New System.Windows.Forms.TextBox()
         Me.Label_device_system = New System.Windows.Forms.Label()
         Me.Label25 = New System.Windows.Forms.Label()
         Me.Label_device_intern = New System.Windows.Forms.Label()
@@ -58,7 +58,7 @@ Partial Class Main
         Me.Label14 = New System.Windows.Forms.Label()
         Me.Label16 = New System.Windows.Forms.Label()
         Me.Label_device_manufacturer = New System.Windows.Forms.Label()
-        Me.TabPage1 = New System.Windows.Forms.TabPage()
+        Me.TabPage_Filemanager = New System.Windows.Forms.TabPage()
         Me.Button_PullDirectory = New System.Windows.Forms.Button()
         Me.Button_PushFile = New System.Windows.Forms.Button()
         Me.Button_Push = New System.Windows.Forms.Button()
@@ -67,7 +67,7 @@ Partial Class Main
         Me.Label26 = New System.Windows.Forms.Label()
         Me.TextBox_PathPC = New System.Windows.Forms.TextBox()
         Me.TextBox_PathPhone = New System.Windows.Forms.TextBox()
-        Me.TabPage2 = New System.Windows.Forms.TabPage()
+        Me.TabPage_Screen = New System.Windows.Forms.TabPage()
         Me.GroupBox1 = New System.Windows.Forms.GroupBox()
         Me.Label5 = New System.Windows.Forms.Label()
         Me.CheckBox_RecOnPC = New System.Windows.Forms.CheckBox()
@@ -85,7 +85,7 @@ Partial Class Main
         Me.Button_Screenrec = New System.Windows.Forms.Button()
         Me.CheckBox_ScreenCap = New System.Windows.Forms.CheckBox()
         Me.Picture_Screen = New System.Windows.Forms.PictureBox()
-        Me.TabPage3 = New System.Windows.Forms.TabPage()
+        Me.TabPage_Restart = New System.Windows.Forms.TabPage()
         Me.Label9 = New System.Windows.Forms.Label()
         Me.Label8 = New System.Windows.Forms.Label()
         Me.Label7 = New System.Windows.Forms.Label()
@@ -94,7 +94,7 @@ Partial Class Main
         Me.Button_Bootloader = New System.Windows.Forms.Button()
         Me.Button_Fastboot = New System.Windows.Forms.Button()
         Me.Button_Reboot = New System.Windows.Forms.Button()
-        Me.TabPage4 = New System.Windows.Forms.TabPage()
+        Me.TabPage_Sideload = New System.Windows.Forms.TabPage()
         Me.Label13 = New System.Windows.Forms.Label()
         Me.Button_Sideload = New System.Windows.Forms.Button()
         Me.Button_SideloadSearch = New System.Windows.Forms.Button()
@@ -103,7 +103,7 @@ Partial Class Main
         Me.Label11 = New System.Windows.Forms.Label()
         Me.Button_RecoverySideload = New System.Windows.Forms.Button()
         Me.Label10 = New System.Windows.Forms.Label()
-        Me.TabPage5 = New System.Windows.Forms.TabPage()
+        Me.TabPage_Apps = New System.Windows.Forms.TabPage()
         Me.TextBox_Apps_Search = New System.Windows.Forms.TextBox()
         Me.Label29 = New System.Windows.Forms.Label()
         Me.Button_Apk = New System.Windows.Forms.Button()
@@ -113,12 +113,12 @@ Partial Class Main
         Me.Button_Uninstall = New System.Windows.Forms.Button()
         Me.Button_Apps_Refresh = New System.Windows.Forms.Button()
         Me.ListBox_Apps = New System.Windows.Forms.ListBox()
-        Me.TabPage7 = New System.Windows.Forms.TabPage()
+        Me.TabPage_Phone = New System.Windows.Forms.TabPage()
         Me.Button_Call = New System.Windows.Forms.Button()
         Me.Button_Dial = New System.Windows.Forms.Button()
         Me.TextBox_Nummer = New System.Windows.Forms.TextBox()
         Me.Label22 = New System.Windows.Forms.Label()
-        Me.TabPage8 = New System.Windows.Forms.TabPage()
+        Me.TabPage_BuildProp = New System.Windows.Forms.TabPage()
         Me.Button_BuildPropSet = New System.Windows.Forms.Button()
         Me.TextBox_BuildPropValue = New System.Windows.Forms.TextBox()
         Me.Label32 = New System.Windows.Forms.Label()
@@ -128,12 +128,27 @@ Partial Class Main
         Me.Label30 = New System.Windows.Forms.Label()
         Me.Button_BuildPropRefresh = New System.Windows.Forms.Button()
         Me.ListBox_BuildProp = New System.Windows.Forms.ListBox()
-        Me.TabPage10 = New System.Windows.Forms.TabPage()
+        Me.TabPage_Console = New System.Windows.Forms.TabPage()
         Me.Label35 = New System.Windows.Forms.Label()
         Me.Button_Command = New System.Windows.Forms.Button()
         Me.TextBox_Command = New System.Windows.Forms.TextBox()
         Me.TextBox_Command_Output = New System.Windows.Forms.TextBox()
-        Me.TabPage9 = New System.Windows.Forms.TabPage()
+        Me.TabPage_Backup = New System.Windows.Forms.TabPage()
+        Me.Button_Backup_RestorePath = New System.Windows.Forms.Button()
+        Me.TextBox_Backup_RestorePath = New System.Windows.Forms.TextBox()
+        Me.Button_Backup_Restore = New System.Windows.Forms.Button()
+        Me.Button_Backup_Backup = New System.Windows.Forms.Button()
+        Me.CheckBox_Backup_System = New System.Windows.Forms.CheckBox()
+        Me.CheckBox_Backup_Shared = New System.Windows.Forms.CheckBox()
+        Me.CheckBox_Backup_OBB = New System.Windows.Forms.CheckBox()
+        Me.CheckBox_Backup_APK = New System.Windows.Forms.CheckBox()
+        Me.CheckBox_Backup_All = New System.Windows.Forms.CheckBox()
+        Me.Button_Backup_Target = New System.Windows.Forms.Button()
+        Me.TextBox_Backup_Target = New System.Windows.Forms.TextBox()
+        Me.TabPageSettings = New System.Windows.Forms.TabPage()
+        Me.GroupBox6 = New System.Windows.Forms.GroupBox()
+        Me.TextBox_OwnPath = New System.Windows.Forms.TextBox()
+        Me.TabPage_Help = New System.Windows.Forms.TabPage()
         Me.Label34 = New System.Windows.Forms.Label()
         Me.Label33 = New System.Windows.Forms.Label()
         Me.StatusTimer = New System.Windows.Forms.Timer(Me.components)
@@ -144,41 +159,29 @@ Partial Class Main
         Me.OpenFile_Push = New System.Windows.Forms.OpenFileDialog()
         Me.FolderBrowserPull = New System.Windows.Forms.FolderBrowserDialog()
         Me.OpenFile_Apk = New System.Windows.Forms.OpenFileDialog()
-        Me.PictureBox1 = New System.Windows.Forms.PictureBox()
-        Me.TabPage11 = New System.Windows.Forms.TabPage()
-        Me.TextBox_Backup_Target = New System.Windows.Forms.TextBox()
-        Me.Button_Backup_Target = New System.Windows.Forms.Button()
-        Me.CheckBox_Backup_All = New System.Windows.Forms.CheckBox()
-        Me.CheckBox_Backup_APK = New System.Windows.Forms.CheckBox()
-        Me.CheckBox_Backup_OBB = New System.Windows.Forms.CheckBox()
-        Me.CheckBox_Backup_Shared = New System.Windows.Forms.CheckBox()
-        Me.CheckBox_Backup_System = New System.Windows.Forms.CheckBox()
-        Me.Button_Backup_Backup = New System.Windows.Forms.Button()
-        Me.Button_Backup_Restore = New System.Windows.Forms.Button()
-        Me.TextBox_Backup_RestorePath = New System.Windows.Forms.TextBox()
-        Me.Button_Backup_RestorePath = New System.Windows.Forms.Button()
         Me.OpenFile_Backup = New System.Windows.Forms.OpenFileDialog()
         Me.StatusStrip1.SuspendLayout()
         Me.TabControl1.SuspendLayout()
-        Me.TabPage6.SuspendLayout()
+        Me.TabPage_Device.SuspendLayout()
         Me.GroupBox4.SuspendLayout()
         Me.GroupBox3.SuspendLayout()
         Me.GroupBox2.SuspendLayout()
-        Me.TabPage1.SuspendLayout()
-        Me.TabPage2.SuspendLayout()
+        Me.TabPage_Filemanager.SuspendLayout()
+        Me.TabPage_Screen.SuspendLayout()
         Me.GroupBox1.SuspendLayout()
         CType(Me.TrackBar_Bitrate, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.TrackBar_RecTime, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.Picture_Screen, System.ComponentModel.ISupportInitialize).BeginInit()
-        Me.TabPage3.SuspendLayout()
-        Me.TabPage4.SuspendLayout()
-        Me.TabPage5.SuspendLayout()
-        Me.TabPage7.SuspendLayout()
-        Me.TabPage8.SuspendLayout()
-        Me.TabPage10.SuspendLayout()
-        Me.TabPage9.SuspendLayout()
-        CType(Me.PictureBox1, System.ComponentModel.ISupportInitialize).BeginInit()
-        Me.TabPage11.SuspendLayout()
+        Me.TabPage_Restart.SuspendLayout()
+        Me.TabPage_Sideload.SuspendLayout()
+        Me.TabPage_Apps.SuspendLayout()
+        Me.TabPage_Phone.SuspendLayout()
+        Me.TabPage_BuildProp.SuspendLayout()
+        Me.TabPage_Console.SuspendLayout()
+        Me.TabPage_Backup.SuspendLayout()
+        Me.TabPageSettings.SuspendLayout()
+        Me.GroupBox6.SuspendLayout()
+        Me.TabPage_Help.SuspendLayout()
         Me.SuspendLayout()
         '
         'StatusStrip1
@@ -219,41 +222,42 @@ Partial Class Main
         'TabControl1
         '
         Me.TabControl1.Anchor = CType((System.Windows.Forms.AnchorStyles.Top Or System.Windows.Forms.AnchorStyles.Bottom), System.Windows.Forms.AnchorStyles)
-        Me.TabControl1.Controls.Add(Me.TabPage6)
-        Me.TabControl1.Controls.Add(Me.TabPage1)
-        Me.TabControl1.Controls.Add(Me.TabPage2)
-        Me.TabControl1.Controls.Add(Me.TabPage3)
-        Me.TabControl1.Controls.Add(Me.TabPage4)
-        Me.TabControl1.Controls.Add(Me.TabPage5)
-        Me.TabControl1.Controls.Add(Me.TabPage7)
-        Me.TabControl1.Controls.Add(Me.TabPage8)
-        Me.TabControl1.Controls.Add(Me.TabPage10)
-        Me.TabControl1.Controls.Add(Me.TabPage11)
-        Me.TabControl1.Controls.Add(Me.TabPage9)
+        Me.TabControl1.Controls.Add(Me.TabPage_Device)
+        Me.TabControl1.Controls.Add(Me.TabPage_Filemanager)
+        Me.TabControl1.Controls.Add(Me.TabPage_Screen)
+        Me.TabControl1.Controls.Add(Me.TabPage_Restart)
+        Me.TabControl1.Controls.Add(Me.TabPage_Sideload)
+        Me.TabControl1.Controls.Add(Me.TabPage_Apps)
+        Me.TabControl1.Controls.Add(Me.TabPage_Phone)
+        Me.TabControl1.Controls.Add(Me.TabPage_BuildProp)
+        Me.TabControl1.Controls.Add(Me.TabPage_Console)
+        Me.TabControl1.Controls.Add(Me.TabPage_Backup)
+        Me.TabControl1.Controls.Add(Me.TabPageSettings)
+        Me.TabControl1.Controls.Add(Me.TabPage_Help)
         Me.TabControl1.Location = New System.Drawing.Point(0, -1)
         Me.TabControl1.Name = "TabControl1"
         Me.TabControl1.SelectedIndex = 0
         Me.TabControl1.Size = New System.Drawing.Size(728, 373)
         Me.TabControl1.TabIndex = 1
         '
-        'TabPage6
+        'TabPage_Device
         '
-        Me.TabPage6.BackgroundImage = Global.ADBGUI.My.Resources.Resources.Hintergrund2
-        Me.TabPage6.Controls.Add(Me.GroupBox4)
-        Me.TabPage6.Controls.Add(Me.GroupBox3)
-        Me.TabPage6.Controls.Add(Me.GroupBox2)
-        Me.TabPage6.Location = New System.Drawing.Point(4, 22)
-        Me.TabPage6.Name = "TabPage6"
-        Me.TabPage6.Padding = New System.Windows.Forms.Padding(3)
-        Me.TabPage6.Size = New System.Drawing.Size(672, 350)
-        Me.TabPage6.TabIndex = 5
-        Me.TabPage6.Text = "Gerät"
-        Me.TabPage6.UseVisualStyleBackColor = True
+        Me.TabPage_Device.BackgroundImage = Global.ADBGUI.My.Resources.Resources.Hintergrund2
+        Me.TabPage_Device.Controls.Add(Me.GroupBox4)
+        Me.TabPage_Device.Controls.Add(Me.GroupBox3)
+        Me.TabPage_Device.Controls.Add(Me.GroupBox2)
+        Me.TabPage_Device.Location = New System.Drawing.Point(4, 22)
+        Me.TabPage_Device.Name = "TabPage_Device"
+        Me.TabPage_Device.Padding = New System.Windows.Forms.Padding(3)
+        Me.TabPage_Device.Size = New System.Drawing.Size(720, 347)
+        Me.TabPage_Device.TabIndex = 5
+        Me.TabPage_Device.Text = "Gerät"
+        Me.TabPage_Device.UseVisualStyleBackColor = True
         '
         'GroupBox4
         '
+        Me.GroupBox4.Controls.Add(Me.Label_ownpath)
         Me.GroupBox4.Controls.Add(Me.Label_device_ownpath)
-        Me.GroupBox4.Controls.Add(Me.TextBox_OwnPath)
         Me.GroupBox4.Controls.Add(Me.Label_device_system)
         Me.GroupBox4.Controls.Add(Me.Label25)
         Me.GroupBox4.Controls.Add(Me.Label_device_intern)
@@ -262,27 +266,28 @@ Partial Class Main
         Me.GroupBox4.Controls.Add(Me.Label23)
         Me.GroupBox4.Location = New System.Drawing.Point(3, 161)
         Me.GroupBox4.Name = "GroupBox4"
-        Me.GroupBox4.Size = New System.Drawing.Size(297, 83)
+        Me.GroupBox4.Size = New System.Drawing.Size(297, 73)
         Me.GroupBox4.TabIndex = 6
         Me.GroupBox4.TabStop = False
         Me.GroupBox4.Text = "Speicherplatz"
         '
+        'Label_ownpath
+        '
+        Me.Label_ownpath.AutoSize = True
+        Me.Label_ownpath.Location = New System.Drawing.Point(6, 55)
+        Me.Label_ownpath.Name = "Label_ownpath"
+        Me.Label_ownpath.Size = New System.Drawing.Size(48, 13)
+        Me.Label_ownpath.TabIndex = 8
+        Me.Label_ownpath.Text = "ownpath"
+        '
         'Label_device_ownpath
         '
         Me.Label_device_ownpath.AutoSize = True
-        Me.Label_device_ownpath.Location = New System.Drawing.Point(81, 62)
+        Me.Label_device_ownpath.Location = New System.Drawing.Point(65, 55)
         Me.Label_device_ownpath.Name = "Label_device_ownpath"
         Me.Label_device_ownpath.Size = New System.Drawing.Size(48, 13)
         Me.Label_device_ownpath.TabIndex = 7
         Me.Label_device_ownpath.Text = "ownpath"
-        '
-        'TextBox_OwnPath
-        '
-        Me.TextBox_OwnPath.Location = New System.Drawing.Point(9, 59)
-        Me.TextBox_OwnPath.Name = "TextBox_OwnPath"
-        Me.TextBox_OwnPath.Size = New System.Drawing.Size(66, 20)
-        Me.TextBox_OwnPath.TabIndex = 6
-        Me.TextBox_OwnPath.Text = "Eigener Pfad"
         '
         'Label_device_system
         '
@@ -517,24 +522,24 @@ Partial Class Main
         Me.Label_device_manufacturer.TabIndex = 1
         Me.Label_device_manufacturer.Text = "manufacturer"
         '
-        'TabPage1
+        'TabPage_Filemanager
         '
-        Me.TabPage1.BackgroundImage = CType(resources.GetObject("TabPage1.BackgroundImage"), System.Drawing.Image)
-        Me.TabPage1.Controls.Add(Me.Button_PullDirectory)
-        Me.TabPage1.Controls.Add(Me.Button_PushFile)
-        Me.TabPage1.Controls.Add(Me.Button_Push)
-        Me.TabPage1.Controls.Add(Me.Button_Pull)
-        Me.TabPage1.Controls.Add(Me.Label27)
-        Me.TabPage1.Controls.Add(Me.Label26)
-        Me.TabPage1.Controls.Add(Me.TextBox_PathPC)
-        Me.TabPage1.Controls.Add(Me.TextBox_PathPhone)
-        Me.TabPage1.Location = New System.Drawing.Point(4, 22)
-        Me.TabPage1.Name = "TabPage1"
-        Me.TabPage1.Padding = New System.Windows.Forms.Padding(3)
-        Me.TabPage1.Size = New System.Drawing.Size(720, 347)
-        Me.TabPage1.TabIndex = 0
-        Me.TabPage1.Text = "Dateimanager"
-        Me.TabPage1.UseVisualStyleBackColor = True
+        Me.TabPage_Filemanager.BackgroundImage = CType(resources.GetObject("TabPage_Filemanager.BackgroundImage"), System.Drawing.Image)
+        Me.TabPage_Filemanager.Controls.Add(Me.Button_PullDirectory)
+        Me.TabPage_Filemanager.Controls.Add(Me.Button_PushFile)
+        Me.TabPage_Filemanager.Controls.Add(Me.Button_Push)
+        Me.TabPage_Filemanager.Controls.Add(Me.Button_Pull)
+        Me.TabPage_Filemanager.Controls.Add(Me.Label27)
+        Me.TabPage_Filemanager.Controls.Add(Me.Label26)
+        Me.TabPage_Filemanager.Controls.Add(Me.TextBox_PathPC)
+        Me.TabPage_Filemanager.Controls.Add(Me.TextBox_PathPhone)
+        Me.TabPage_Filemanager.Location = New System.Drawing.Point(4, 22)
+        Me.TabPage_Filemanager.Name = "TabPage_Filemanager"
+        Me.TabPage_Filemanager.Padding = New System.Windows.Forms.Padding(3)
+        Me.TabPage_Filemanager.Size = New System.Drawing.Size(720, 347)
+        Me.TabPage_Filemanager.TabIndex = 0
+        Me.TabPage_Filemanager.Text = "Dateimanager"
+        Me.TabPage_Filemanager.UseVisualStyleBackColor = True
         '
         'Button_PullDirectory
         '
@@ -605,19 +610,19 @@ Partial Class Main
         Me.TextBox_PathPhone.TabIndex = 0
         Me.TextBox_PathPhone.Text = "/storage/sdcard0/"
         '
-        'TabPage2
+        'TabPage_Screen
         '
-        Me.TabPage2.BackgroundImage = Global.ADBGUI.My.Resources.Resources.Hintergrund2
-        Me.TabPage2.Controls.Add(Me.GroupBox1)
-        Me.TabPage2.Controls.Add(Me.CheckBox_ScreenCap)
-        Me.TabPage2.Controls.Add(Me.Picture_Screen)
-        Me.TabPage2.Location = New System.Drawing.Point(4, 22)
-        Me.TabPage2.Name = "TabPage2"
-        Me.TabPage2.Padding = New System.Windows.Forms.Padding(3)
-        Me.TabPage2.Size = New System.Drawing.Size(672, 350)
-        Me.TabPage2.TabIndex = 1
-        Me.TabPage2.Text = "Bildschirmübertragung"
-        Me.TabPage2.UseVisualStyleBackColor = True
+        Me.TabPage_Screen.BackgroundImage = Global.ADBGUI.My.Resources.Resources.Hintergrund2
+        Me.TabPage_Screen.Controls.Add(Me.GroupBox1)
+        Me.TabPage_Screen.Controls.Add(Me.CheckBox_ScreenCap)
+        Me.TabPage_Screen.Controls.Add(Me.Picture_Screen)
+        Me.TabPage_Screen.Location = New System.Drawing.Point(4, 22)
+        Me.TabPage_Screen.Name = "TabPage_Screen"
+        Me.TabPage_Screen.Padding = New System.Windows.Forms.Padding(3)
+        Me.TabPage_Screen.Size = New System.Drawing.Size(720, 347)
+        Me.TabPage_Screen.TabIndex = 1
+        Me.TabPage_Screen.Text = "Bildschirmübertragung"
+        Me.TabPage_Screen.UseVisualStyleBackColor = True
         '
         'GroupBox1
         '
@@ -793,24 +798,24 @@ Partial Class Main
         Me.Picture_Screen.TabStop = False
         Me.Picture_Screen.WaitOnLoad = True
         '
-        'TabPage3
+        'TabPage_Restart
         '
-        Me.TabPage3.BackgroundImage = Global.ADBGUI.My.Resources.Resources.Hintergrund2
-        Me.TabPage3.Controls.Add(Me.Label9)
-        Me.TabPage3.Controls.Add(Me.Label8)
-        Me.TabPage3.Controls.Add(Me.Label7)
-        Me.TabPage3.Controls.Add(Me.Label6)
-        Me.TabPage3.Controls.Add(Me.Button_Recovery)
-        Me.TabPage3.Controls.Add(Me.Button_Bootloader)
-        Me.TabPage3.Controls.Add(Me.Button_Fastboot)
-        Me.TabPage3.Controls.Add(Me.Button_Reboot)
-        Me.TabPage3.Location = New System.Drawing.Point(4, 22)
-        Me.TabPage3.Name = "TabPage3"
-        Me.TabPage3.Padding = New System.Windows.Forms.Padding(3)
-        Me.TabPage3.Size = New System.Drawing.Size(672, 350)
-        Me.TabPage3.TabIndex = 2
-        Me.TabPage3.Text = "Neustart"
-        Me.TabPage3.UseVisualStyleBackColor = True
+        Me.TabPage_Restart.BackgroundImage = Global.ADBGUI.My.Resources.Resources.Hintergrund2
+        Me.TabPage_Restart.Controls.Add(Me.Label9)
+        Me.TabPage_Restart.Controls.Add(Me.Label8)
+        Me.TabPage_Restart.Controls.Add(Me.Label7)
+        Me.TabPage_Restart.Controls.Add(Me.Label6)
+        Me.TabPage_Restart.Controls.Add(Me.Button_Recovery)
+        Me.TabPage_Restart.Controls.Add(Me.Button_Bootloader)
+        Me.TabPage_Restart.Controls.Add(Me.Button_Fastboot)
+        Me.TabPage_Restart.Controls.Add(Me.Button_Reboot)
+        Me.TabPage_Restart.Location = New System.Drawing.Point(4, 22)
+        Me.TabPage_Restart.Name = "TabPage_Restart"
+        Me.TabPage_Restart.Padding = New System.Windows.Forms.Padding(3)
+        Me.TabPage_Restart.Size = New System.Drawing.Size(720, 347)
+        Me.TabPage_Restart.TabIndex = 2
+        Me.TabPage_Restart.Text = "Neustart"
+        Me.TabPage_Restart.UseVisualStyleBackColor = True
         '
         'Label9
         '
@@ -885,24 +890,24 @@ Partial Class Main
         Me.Button_Reboot.Text = "Neustart"
         Me.Button_Reboot.UseVisualStyleBackColor = True
         '
-        'TabPage4
+        'TabPage_Sideload
         '
-        Me.TabPage4.BackgroundImage = Global.ADBGUI.My.Resources.Resources.Hintergrund2
-        Me.TabPage4.Controls.Add(Me.Label13)
-        Me.TabPage4.Controls.Add(Me.Button_Sideload)
-        Me.TabPage4.Controls.Add(Me.Button_SideloadSearch)
-        Me.TabPage4.Controls.Add(Me.TextBox_SideloadPath)
-        Me.TabPage4.Controls.Add(Me.Label12)
-        Me.TabPage4.Controls.Add(Me.Label11)
-        Me.TabPage4.Controls.Add(Me.Button_RecoverySideload)
-        Me.TabPage4.Controls.Add(Me.Label10)
-        Me.TabPage4.Location = New System.Drawing.Point(4, 22)
-        Me.TabPage4.Name = "TabPage4"
-        Me.TabPage4.Padding = New System.Windows.Forms.Padding(3)
-        Me.TabPage4.Size = New System.Drawing.Size(672, 350)
-        Me.TabPage4.TabIndex = 3
-        Me.TabPage4.Text = "Sideload"
-        Me.TabPage4.UseVisualStyleBackColor = True
+        Me.TabPage_Sideload.BackgroundImage = Global.ADBGUI.My.Resources.Resources.Hintergrund2
+        Me.TabPage_Sideload.Controls.Add(Me.Label13)
+        Me.TabPage_Sideload.Controls.Add(Me.Button_Sideload)
+        Me.TabPage_Sideload.Controls.Add(Me.Button_SideloadSearch)
+        Me.TabPage_Sideload.Controls.Add(Me.TextBox_SideloadPath)
+        Me.TabPage_Sideload.Controls.Add(Me.Label12)
+        Me.TabPage_Sideload.Controls.Add(Me.Label11)
+        Me.TabPage_Sideload.Controls.Add(Me.Button_RecoverySideload)
+        Me.TabPage_Sideload.Controls.Add(Me.Label10)
+        Me.TabPage_Sideload.Location = New System.Drawing.Point(4, 22)
+        Me.TabPage_Sideload.Name = "TabPage_Sideload"
+        Me.TabPage_Sideload.Padding = New System.Windows.Forms.Padding(3)
+        Me.TabPage_Sideload.Size = New System.Drawing.Size(720, 347)
+        Me.TabPage_Sideload.TabIndex = 3
+        Me.TabPage_Sideload.Text = "Sideload"
+        Me.TabPage_Sideload.UseVisualStyleBackColor = True
         '
         'Label13
         '
@@ -974,25 +979,25 @@ Partial Class Main
         Me.Label10.TabIndex = 0
         Me.Label10.Text = "1. Gerät in die Recovery neustarten."
         '
-        'TabPage5
+        'TabPage_Apps
         '
-        Me.TabPage5.BackgroundImage = Global.ADBGUI.My.Resources.Resources.Hintergrund2
-        Me.TabPage5.Controls.Add(Me.TextBox_Apps_Search)
-        Me.TabPage5.Controls.Add(Me.Label29)
-        Me.TabPage5.Controls.Add(Me.Button_Apk)
-        Me.TabPage5.Controls.Add(Me.Button_Install)
-        Me.TabPage5.Controls.Add(Me.Label28)
-        Me.TabPage5.Controls.Add(Me.TextBox_Apk)
-        Me.TabPage5.Controls.Add(Me.Button_Uninstall)
-        Me.TabPage5.Controls.Add(Me.Button_Apps_Refresh)
-        Me.TabPage5.Controls.Add(Me.ListBox_Apps)
-        Me.TabPage5.Location = New System.Drawing.Point(4, 22)
-        Me.TabPage5.Name = "TabPage5"
-        Me.TabPage5.Padding = New System.Windows.Forms.Padding(3)
-        Me.TabPage5.Size = New System.Drawing.Size(672, 350)
-        Me.TabPage5.TabIndex = 4
-        Me.TabPage5.Text = "Apps"
-        Me.TabPage5.UseVisualStyleBackColor = True
+        Me.TabPage_Apps.BackgroundImage = Global.ADBGUI.My.Resources.Resources.Hintergrund2
+        Me.TabPage_Apps.Controls.Add(Me.TextBox_Apps_Search)
+        Me.TabPage_Apps.Controls.Add(Me.Label29)
+        Me.TabPage_Apps.Controls.Add(Me.Button_Apk)
+        Me.TabPage_Apps.Controls.Add(Me.Button_Install)
+        Me.TabPage_Apps.Controls.Add(Me.Label28)
+        Me.TabPage_Apps.Controls.Add(Me.TextBox_Apk)
+        Me.TabPage_Apps.Controls.Add(Me.Button_Uninstall)
+        Me.TabPage_Apps.Controls.Add(Me.Button_Apps_Refresh)
+        Me.TabPage_Apps.Controls.Add(Me.ListBox_Apps)
+        Me.TabPage_Apps.Location = New System.Drawing.Point(4, 22)
+        Me.TabPage_Apps.Name = "TabPage_Apps"
+        Me.TabPage_Apps.Padding = New System.Windows.Forms.Padding(3)
+        Me.TabPage_Apps.Size = New System.Drawing.Size(720, 347)
+        Me.TabPage_Apps.TabIndex = 4
+        Me.TabPage_Apps.Text = "Apps"
+        Me.TabPage_Apps.UseVisualStyleBackColor = True
         '
         'TextBox_Apps_Search
         '
@@ -1070,20 +1075,20 @@ Partial Class Main
         Me.ListBox_Apps.Size = New System.Drawing.Size(271, 329)
         Me.ListBox_Apps.TabIndex = 0
         '
-        'TabPage7
+        'TabPage_Phone
         '
-        Me.TabPage7.BackgroundImage = Global.ADBGUI.My.Resources.Resources.Hintergrund2
-        Me.TabPage7.Controls.Add(Me.Button_Call)
-        Me.TabPage7.Controls.Add(Me.Button_Dial)
-        Me.TabPage7.Controls.Add(Me.TextBox_Nummer)
-        Me.TabPage7.Controls.Add(Me.Label22)
-        Me.TabPage7.Location = New System.Drawing.Point(4, 22)
-        Me.TabPage7.Name = "TabPage7"
-        Me.TabPage7.Padding = New System.Windows.Forms.Padding(3)
-        Me.TabPage7.Size = New System.Drawing.Size(672, 350)
-        Me.TabPage7.TabIndex = 6
-        Me.TabPage7.Text = "Telefon"
-        Me.TabPage7.UseVisualStyleBackColor = True
+        Me.TabPage_Phone.BackgroundImage = Global.ADBGUI.My.Resources.Resources.Hintergrund2
+        Me.TabPage_Phone.Controls.Add(Me.Button_Call)
+        Me.TabPage_Phone.Controls.Add(Me.Button_Dial)
+        Me.TabPage_Phone.Controls.Add(Me.TextBox_Nummer)
+        Me.TabPage_Phone.Controls.Add(Me.Label22)
+        Me.TabPage_Phone.Location = New System.Drawing.Point(4, 22)
+        Me.TabPage_Phone.Name = "TabPage_Phone"
+        Me.TabPage_Phone.Padding = New System.Windows.Forms.Padding(3)
+        Me.TabPage_Phone.Size = New System.Drawing.Size(720, 347)
+        Me.TabPage_Phone.TabIndex = 6
+        Me.TabPage_Phone.Text = "Telefon"
+        Me.TabPage_Phone.UseVisualStyleBackColor = True
         '
         'Button_Call
         '
@@ -1119,25 +1124,25 @@ Partial Class Main
         Me.Label22.TabIndex = 0
         Me.Label22.Text = "Telefonnummer:"
         '
-        'TabPage8
+        'TabPage_BuildProp
         '
-        Me.TabPage8.BackgroundImage = Global.ADBGUI.My.Resources.Resources.Hintergrund2
-        Me.TabPage8.Controls.Add(Me.Button_BuildPropSet)
-        Me.TabPage8.Controls.Add(Me.TextBox_BuildPropValue)
-        Me.TabPage8.Controls.Add(Me.Label32)
-        Me.TabPage8.Controls.Add(Me.Label31)
-        Me.TabPage8.Controls.Add(Me.TextBox_BuildPropKey)
-        Me.TabPage8.Controls.Add(Me.TextBox_BuildPropSearch)
-        Me.TabPage8.Controls.Add(Me.Label30)
-        Me.TabPage8.Controls.Add(Me.Button_BuildPropRefresh)
-        Me.TabPage8.Controls.Add(Me.ListBox_BuildProp)
-        Me.TabPage8.Location = New System.Drawing.Point(4, 22)
-        Me.TabPage8.Name = "TabPage8"
-        Me.TabPage8.Padding = New System.Windows.Forms.Padding(3)
-        Me.TabPage8.Size = New System.Drawing.Size(720, 347)
-        Me.TabPage8.TabIndex = 7
-        Me.TabPage8.Text = "BuildProp"
-        Me.TabPage8.UseVisualStyleBackColor = True
+        Me.TabPage_BuildProp.BackgroundImage = Global.ADBGUI.My.Resources.Resources.Hintergrund2
+        Me.TabPage_BuildProp.Controls.Add(Me.Button_BuildPropSet)
+        Me.TabPage_BuildProp.Controls.Add(Me.TextBox_BuildPropValue)
+        Me.TabPage_BuildProp.Controls.Add(Me.Label32)
+        Me.TabPage_BuildProp.Controls.Add(Me.Label31)
+        Me.TabPage_BuildProp.Controls.Add(Me.TextBox_BuildPropKey)
+        Me.TabPage_BuildProp.Controls.Add(Me.TextBox_BuildPropSearch)
+        Me.TabPage_BuildProp.Controls.Add(Me.Label30)
+        Me.TabPage_BuildProp.Controls.Add(Me.Button_BuildPropRefresh)
+        Me.TabPage_BuildProp.Controls.Add(Me.ListBox_BuildProp)
+        Me.TabPage_BuildProp.Location = New System.Drawing.Point(4, 22)
+        Me.TabPage_BuildProp.Name = "TabPage_BuildProp"
+        Me.TabPage_BuildProp.Padding = New System.Windows.Forms.Padding(3)
+        Me.TabPage_BuildProp.Size = New System.Drawing.Size(720, 347)
+        Me.TabPage_BuildProp.TabIndex = 7
+        Me.TabPage_BuildProp.Text = "BuildProp"
+        Me.TabPage_BuildProp.UseVisualStyleBackColor = True
         '
         'Button_BuildPropSet
         '
@@ -1213,20 +1218,20 @@ Partial Class Main
         Me.ListBox_BuildProp.Size = New System.Drawing.Size(270, 329)
         Me.ListBox_BuildProp.TabIndex = 0
         '
-        'TabPage10
+        'TabPage_Console
         '
-        Me.TabPage10.BackgroundImage = Global.ADBGUI.My.Resources.Resources.Hintergrund2
-        Me.TabPage10.Controls.Add(Me.Label35)
-        Me.TabPage10.Controls.Add(Me.Button_Command)
-        Me.TabPage10.Controls.Add(Me.TextBox_Command)
-        Me.TabPage10.Controls.Add(Me.TextBox_Command_Output)
-        Me.TabPage10.Location = New System.Drawing.Point(4, 22)
-        Me.TabPage10.Name = "TabPage10"
-        Me.TabPage10.Padding = New System.Windows.Forms.Padding(3)
-        Me.TabPage10.Size = New System.Drawing.Size(720, 347)
-        Me.TabPage10.TabIndex = 9
-        Me.TabPage10.Text = "Konsole"
-        Me.TabPage10.UseVisualStyleBackColor = True
+        Me.TabPage_Console.BackgroundImage = Global.ADBGUI.My.Resources.Resources.Hintergrund2
+        Me.TabPage_Console.Controls.Add(Me.Label35)
+        Me.TabPage_Console.Controls.Add(Me.Button_Command)
+        Me.TabPage_Console.Controls.Add(Me.TextBox_Command)
+        Me.TabPage_Console.Controls.Add(Me.TextBox_Command_Output)
+        Me.TabPage_Console.Location = New System.Drawing.Point(4, 22)
+        Me.TabPage_Console.Name = "TabPage_Console"
+        Me.TabPage_Console.Padding = New System.Windows.Forms.Padding(3)
+        Me.TabPage_Console.Size = New System.Drawing.Size(720, 347)
+        Me.TabPage_Console.TabIndex = 9
+        Me.TabPage_Console.Text = "Konsole"
+        Me.TabPage_Console.UseVisualStyleBackColor = True
         '
         'Label35
         '
@@ -1239,7 +1244,7 @@ Partial Class Main
         '
         'Button_Command
         '
-        Me.Button_Command.Location = New System.Drawing.Point(567, 322)
+        Me.Button_Command.Location = New System.Drawing.Point(612, 322)
         Me.Button_Command.Name = "Button_Command"
         Me.Button_Command.Size = New System.Drawing.Size(102, 23)
         Me.Button_Command.TabIndex = 2
@@ -1250,7 +1255,7 @@ Partial Class Main
         '
         Me.TextBox_Command.Location = New System.Drawing.Point(79, 324)
         Me.TextBox_Command.Name = "TextBox_Command"
-        Me.TextBox_Command.Size = New System.Drawing.Size(479, 20)
+        Me.TextBox_Command.Size = New System.Drawing.Size(527, 20)
         Me.TextBox_Command.TabIndex = 1
         '
         'TextBox_Command_Output
@@ -1259,21 +1264,173 @@ Partial Class Main
         Me.TextBox_Command_Output.Multiline = True
         Me.TextBox_Command_Output.Name = "TextBox_Command_Output"
         Me.TextBox_Command_Output.ScrollBars = System.Windows.Forms.ScrollBars.Vertical
-        Me.TextBox_Command_Output.Size = New System.Drawing.Size(666, 315)
+        Me.TextBox_Command_Output.Size = New System.Drawing.Size(711, 315)
         Me.TextBox_Command_Output.TabIndex = 0
         '
-        'TabPage9
+        'TabPage_Backup
         '
-        Me.TabPage9.BackColor = System.Drawing.Color.Transparent
-        Me.TabPage9.BackgroundImage = Global.ADBGUI.My.Resources.Resources.Hintergrund2
-        Me.TabPage9.Controls.Add(Me.Label34)
-        Me.TabPage9.Controls.Add(Me.Label33)
-        Me.TabPage9.Location = New System.Drawing.Point(4, 22)
-        Me.TabPage9.Name = "TabPage9"
-        Me.TabPage9.Padding = New System.Windows.Forms.Padding(3)
-        Me.TabPage9.Size = New System.Drawing.Size(720, 347)
-        Me.TabPage9.TabIndex = 8
-        Me.TabPage9.Text = "Hilfe"
+        Me.TabPage_Backup.BackgroundImage = Global.ADBGUI.My.Resources.Resources.Hintergrund2
+        Me.TabPage_Backup.Controls.Add(Me.Button_Backup_RestorePath)
+        Me.TabPage_Backup.Controls.Add(Me.TextBox_Backup_RestorePath)
+        Me.TabPage_Backup.Controls.Add(Me.Button_Backup_Restore)
+        Me.TabPage_Backup.Controls.Add(Me.Button_Backup_Backup)
+        Me.TabPage_Backup.Controls.Add(Me.CheckBox_Backup_System)
+        Me.TabPage_Backup.Controls.Add(Me.CheckBox_Backup_Shared)
+        Me.TabPage_Backup.Controls.Add(Me.CheckBox_Backup_OBB)
+        Me.TabPage_Backup.Controls.Add(Me.CheckBox_Backup_APK)
+        Me.TabPage_Backup.Controls.Add(Me.CheckBox_Backup_All)
+        Me.TabPage_Backup.Controls.Add(Me.Button_Backup_Target)
+        Me.TabPage_Backup.Controls.Add(Me.TextBox_Backup_Target)
+        Me.TabPage_Backup.Location = New System.Drawing.Point(4, 22)
+        Me.TabPage_Backup.Name = "TabPage_Backup"
+        Me.TabPage_Backup.Padding = New System.Windows.Forms.Padding(3)
+        Me.TabPage_Backup.Size = New System.Drawing.Size(720, 347)
+        Me.TabPage_Backup.TabIndex = 10
+        Me.TabPage_Backup.Text = "Backup"
+        Me.TabPage_Backup.UseVisualStyleBackColor = True
+        '
+        'Button_Backup_RestorePath
+        '
+        Me.Button_Backup_RestorePath.Location = New System.Drawing.Point(321, 174)
+        Me.Button_Backup_RestorePath.Name = "Button_Backup_RestorePath"
+        Me.Button_Backup_RestorePath.Size = New System.Drawing.Size(100, 23)
+        Me.Button_Backup_RestorePath.TabIndex = 10
+        Me.Button_Backup_RestorePath.Text = "Backup-Datei"
+        Me.Button_Backup_RestorePath.UseVisualStyleBackColor = True
+        '
+        'TextBox_Backup_RestorePath
+        '
+        Me.TextBox_Backup_RestorePath.Location = New System.Drawing.Point(8, 176)
+        Me.TextBox_Backup_RestorePath.Name = "TextBox_Backup_RestorePath"
+        Me.TextBox_Backup_RestorePath.Size = New System.Drawing.Size(307, 20)
+        Me.TextBox_Backup_RestorePath.TabIndex = 9
+        '
+        'Button_Backup_Restore
+        '
+        Me.Button_Backup_Restore.Location = New System.Drawing.Point(8, 202)
+        Me.Button_Backup_Restore.Name = "Button_Backup_Restore"
+        Me.Button_Backup_Restore.Size = New System.Drawing.Size(162, 23)
+        Me.Button_Backup_Restore.TabIndex = 8
+        Me.Button_Backup_Restore.Text = "Wiederherstellen"
+        Me.Button_Backup_Restore.UseVisualStyleBackColor = True
+        '
+        'Button_Backup_Backup
+        '
+        Me.Button_Backup_Backup.Location = New System.Drawing.Point(8, 147)
+        Me.Button_Backup_Backup.Name = "Button_Backup_Backup"
+        Me.Button_Backup_Backup.Size = New System.Drawing.Size(162, 23)
+        Me.Button_Backup_Backup.TabIndex = 7
+        Me.Button_Backup_Backup.Text = "Sichern"
+        Me.Button_Backup_Backup.UseVisualStyleBackColor = True
+        '
+        'CheckBox_Backup_System
+        '
+        Me.CheckBox_Backup_System.AutoSize = True
+        Me.CheckBox_Backup_System.Location = New System.Drawing.Point(8, 124)
+        Me.CheckBox_Backup_System.Name = "CheckBox_Backup_System"
+        Me.CheckBox_Backup_System.Size = New System.Drawing.Size(60, 17)
+        Me.CheckBox_Backup_System.TabIndex = 6
+        Me.CheckBox_Backup_System.Text = "System"
+        Me.CheckBox_Backup_System.UseVisualStyleBackColor = True
+        '
+        'CheckBox_Backup_Shared
+        '
+        Me.CheckBox_Backup_Shared.AutoSize = True
+        Me.CheckBox_Backup_Shared.Location = New System.Drawing.Point(8, 101)
+        Me.CheckBox_Backup_Shared.Name = "CheckBox_Backup_Shared"
+        Me.CheckBox_Backup_Shared.Size = New System.Drawing.Size(149, 17)
+        Me.CheckBox_Backup_Shared.TabIndex = 5
+        Me.CheckBox_Backup_Shared.Text = "Daten(Bilder, Musik, usw.)"
+        Me.CheckBox_Backup_Shared.UseVisualStyleBackColor = True
+        '
+        'CheckBox_Backup_OBB
+        '
+        Me.CheckBox_Backup_OBB.AutoSize = True
+        Me.CheckBox_Backup_OBB.Location = New System.Drawing.Point(8, 78)
+        Me.CheckBox_Backup_OBB.Name = "CheckBox_Backup_OBB"
+        Me.CheckBox_Backup_OBB.Size = New System.Drawing.Size(88, 17)
+        Me.CheckBox_Backup_OBB.TabIndex = 4
+        Me.CheckBox_Backup_OBB.Text = "OBB-Dateien"
+        Me.CheckBox_Backup_OBB.UseVisualStyleBackColor = True
+        '
+        'CheckBox_Backup_APK
+        '
+        Me.CheckBox_Backup_APK.AutoSize = True
+        Me.CheckBox_Backup_APK.Location = New System.Drawing.Point(8, 55)
+        Me.CheckBox_Backup_APK.Name = "CheckBox_Backup_APK"
+        Me.CheckBox_Backup_APK.Size = New System.Drawing.Size(87, 17)
+        Me.CheckBox_Backup_APK.TabIndex = 3
+        Me.CheckBox_Backup_APK.Text = "APK-Dateien"
+        Me.CheckBox_Backup_APK.UseVisualStyleBackColor = True
+        '
+        'CheckBox_Backup_All
+        '
+        Me.CheckBox_Backup_All.AutoSize = True
+        Me.CheckBox_Backup_All.Location = New System.Drawing.Point(8, 32)
+        Me.CheckBox_Backup_All.Name = "CheckBox_Backup_All"
+        Me.CheckBox_Backup_All.Size = New System.Drawing.Size(48, 17)
+        Me.CheckBox_Backup_All.TabIndex = 2
+        Me.CheckBox_Backup_All.Text = "Alles"
+        Me.CheckBox_Backup_All.UseVisualStyleBackColor = True
+        '
+        'Button_Backup_Target
+        '
+        Me.Button_Backup_Target.Location = New System.Drawing.Point(321, 4)
+        Me.Button_Backup_Target.Name = "Button_Backup_Target"
+        Me.Button_Backup_Target.Size = New System.Drawing.Size(75, 23)
+        Me.Button_Backup_Target.TabIndex = 1
+        Me.Button_Backup_Target.Text = "Zielort"
+        Me.Button_Backup_Target.UseVisualStyleBackColor = True
+        '
+        'TextBox_Backup_Target
+        '
+        Me.TextBox_Backup_Target.Location = New System.Drawing.Point(8, 6)
+        Me.TextBox_Backup_Target.Name = "TextBox_Backup_Target"
+        Me.TextBox_Backup_Target.Size = New System.Drawing.Size(307, 20)
+        Me.TextBox_Backup_Target.TabIndex = 0
+        '
+        'TabPageSettings
+        '
+        Me.TabPageSettings.BackgroundImage = Global.ADBGUI.My.Resources.Resources.Hintergrund2
+        Me.TabPageSettings.Controls.Add(Me.GroupBox6)
+        Me.TabPageSettings.Location = New System.Drawing.Point(4, 22)
+        Me.TabPageSettings.Name = "TabPageSettings"
+        Me.TabPageSettings.Padding = New System.Windows.Forms.Padding(3)
+        Me.TabPageSettings.Size = New System.Drawing.Size(720, 347)
+        Me.TabPageSettings.TabIndex = 11
+        Me.TabPageSettings.Text = "Einstellungen"
+        Me.TabPageSettings.UseVisualStyleBackColor = True
+        '
+        'GroupBox6
+        '
+        Me.GroupBox6.Controls.Add(Me.TextBox_OwnPath)
+        Me.GroupBox6.Location = New System.Drawing.Point(8, 6)
+        Me.GroupBox6.Name = "GroupBox6"
+        Me.GroupBox6.Size = New System.Drawing.Size(200, 249)
+        Me.GroupBox6.TabIndex = 9
+        Me.GroupBox6.TabStop = False
+        Me.GroupBox6.Text = "Pfade"
+        '
+        'TextBox_OwnPath
+        '
+        Me.TextBox_OwnPath.Location = New System.Drawing.Point(105, 117)
+        Me.TextBox_OwnPath.Name = "TextBox_OwnPath"
+        Me.TextBox_OwnPath.Size = New System.Drawing.Size(66, 20)
+        Me.TextBox_OwnPath.TabIndex = 7
+        Me.TextBox_OwnPath.Text = "Eigener Pfad"
+        '
+        'TabPage_Help
+        '
+        Me.TabPage_Help.BackColor = System.Drawing.Color.Transparent
+        Me.TabPage_Help.BackgroundImage = Global.ADBGUI.My.Resources.Resources.Hintergrund2
+        Me.TabPage_Help.Controls.Add(Me.Label34)
+        Me.TabPage_Help.Controls.Add(Me.Label33)
+        Me.TabPage_Help.Location = New System.Drawing.Point(4, 22)
+        Me.TabPage_Help.Name = "TabPage_Help"
+        Me.TabPage_Help.Padding = New System.Windows.Forms.Padding(3)
+        Me.TabPage_Help.Size = New System.Drawing.Size(720, 347)
+        Me.TabPage_Help.TabIndex = 8
+        Me.TabPage_Help.Text = "Hilfe"
         '
         'Label34
         '
@@ -1317,139 +1474,6 @@ Partial Class Main
         '
         Me.OpenFile_Apk.Filter = "APK-Dateien|*.apk"
         '
-        'PictureBox1
-        '
-        Me.PictureBox1.BackColor = System.Drawing.Color.Transparent
-        Me.PictureBox1.Image = Global.ADBGUI.My.Resources.Resources.android
-        Me.PictureBox1.Location = New System.Drawing.Point(640, 2)
-        Me.PictureBox1.Name = "PictureBox1"
-        Me.PictureBox1.Size = New System.Drawing.Size(80, 15)
-        Me.PictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage
-        Me.PictureBox1.TabIndex = 2
-        Me.PictureBox1.TabStop = False
-        '
-        'TabPage11
-        '
-        Me.TabPage11.BackgroundImage = Global.ADBGUI.My.Resources.Resources.Hintergrund2
-        Me.TabPage11.Controls.Add(Me.Button_Backup_RestorePath)
-        Me.TabPage11.Controls.Add(Me.TextBox_Backup_RestorePath)
-        Me.TabPage11.Controls.Add(Me.Button_Backup_Restore)
-        Me.TabPage11.Controls.Add(Me.Button_Backup_Backup)
-        Me.TabPage11.Controls.Add(Me.CheckBox_Backup_System)
-        Me.TabPage11.Controls.Add(Me.CheckBox_Backup_Shared)
-        Me.TabPage11.Controls.Add(Me.CheckBox_Backup_OBB)
-        Me.TabPage11.Controls.Add(Me.CheckBox_Backup_APK)
-        Me.TabPage11.Controls.Add(Me.CheckBox_Backup_All)
-        Me.TabPage11.Controls.Add(Me.Button_Backup_Target)
-        Me.TabPage11.Controls.Add(Me.TextBox_Backup_Target)
-        Me.TabPage11.Location = New System.Drawing.Point(4, 22)
-        Me.TabPage11.Name = "TabPage11"
-        Me.TabPage11.Padding = New System.Windows.Forms.Padding(3)
-        Me.TabPage11.Size = New System.Drawing.Size(720, 347)
-        Me.TabPage11.TabIndex = 10
-        Me.TabPage11.Text = "Backup"
-        Me.TabPage11.UseVisualStyleBackColor = True
-        '
-        'TextBox_Backup_Target
-        '
-        Me.TextBox_Backup_Target.Location = New System.Drawing.Point(8, 6)
-        Me.TextBox_Backup_Target.Name = "TextBox_Backup_Target"
-        Me.TextBox_Backup_Target.Size = New System.Drawing.Size(307, 20)
-        Me.TextBox_Backup_Target.TabIndex = 0
-        '
-        'Button_Backup_Target
-        '
-        Me.Button_Backup_Target.Location = New System.Drawing.Point(321, 4)
-        Me.Button_Backup_Target.Name = "Button_Backup_Target"
-        Me.Button_Backup_Target.Size = New System.Drawing.Size(75, 23)
-        Me.Button_Backup_Target.TabIndex = 1
-        Me.Button_Backup_Target.Text = "Zielort"
-        Me.Button_Backup_Target.UseVisualStyleBackColor = True
-        '
-        'CheckBox_Backup_All
-        '
-        Me.CheckBox_Backup_All.AutoSize = True
-        Me.CheckBox_Backup_All.Location = New System.Drawing.Point(8, 32)
-        Me.CheckBox_Backup_All.Name = "CheckBox_Backup_All"
-        Me.CheckBox_Backup_All.Size = New System.Drawing.Size(48, 17)
-        Me.CheckBox_Backup_All.TabIndex = 2
-        Me.CheckBox_Backup_All.Text = "Alles"
-        Me.CheckBox_Backup_All.UseVisualStyleBackColor = True
-        '
-        'CheckBox_Backup_APK
-        '
-        Me.CheckBox_Backup_APK.AutoSize = True
-        Me.CheckBox_Backup_APK.Location = New System.Drawing.Point(8, 55)
-        Me.CheckBox_Backup_APK.Name = "CheckBox_Backup_APK"
-        Me.CheckBox_Backup_APK.Size = New System.Drawing.Size(87, 17)
-        Me.CheckBox_Backup_APK.TabIndex = 3
-        Me.CheckBox_Backup_APK.Text = "APK-Dateien"
-        Me.CheckBox_Backup_APK.UseVisualStyleBackColor = True
-        '
-        'CheckBox_Backup_OBB
-        '
-        Me.CheckBox_Backup_OBB.AutoSize = True
-        Me.CheckBox_Backup_OBB.Location = New System.Drawing.Point(8, 78)
-        Me.CheckBox_Backup_OBB.Name = "CheckBox_Backup_OBB"
-        Me.CheckBox_Backup_OBB.Size = New System.Drawing.Size(88, 17)
-        Me.CheckBox_Backup_OBB.TabIndex = 4
-        Me.CheckBox_Backup_OBB.Text = "OBB-Dateien"
-        Me.CheckBox_Backup_OBB.UseVisualStyleBackColor = True
-        '
-        'CheckBox_Backup_Shared
-        '
-        Me.CheckBox_Backup_Shared.AutoSize = True
-        Me.CheckBox_Backup_Shared.Location = New System.Drawing.Point(8, 101)
-        Me.CheckBox_Backup_Shared.Name = "CheckBox_Backup_Shared"
-        Me.CheckBox_Backup_Shared.Size = New System.Drawing.Size(149, 17)
-        Me.CheckBox_Backup_Shared.TabIndex = 5
-        Me.CheckBox_Backup_Shared.Text = "Daten(Bilder, Musik, usw.)"
-        Me.CheckBox_Backup_Shared.UseVisualStyleBackColor = True
-        '
-        'CheckBox_Backup_System
-        '
-        Me.CheckBox_Backup_System.AutoSize = True
-        Me.CheckBox_Backup_System.Location = New System.Drawing.Point(8, 124)
-        Me.CheckBox_Backup_System.Name = "CheckBox_Backup_System"
-        Me.CheckBox_Backup_System.Size = New System.Drawing.Size(60, 17)
-        Me.CheckBox_Backup_System.TabIndex = 6
-        Me.CheckBox_Backup_System.Text = "System"
-        Me.CheckBox_Backup_System.UseVisualStyleBackColor = True
-        '
-        'Button_Backup_Backup
-        '
-        Me.Button_Backup_Backup.Location = New System.Drawing.Point(8, 147)
-        Me.Button_Backup_Backup.Name = "Button_Backup_Backup"
-        Me.Button_Backup_Backup.Size = New System.Drawing.Size(162, 23)
-        Me.Button_Backup_Backup.TabIndex = 7
-        Me.Button_Backup_Backup.Text = "Sichern"
-        Me.Button_Backup_Backup.UseVisualStyleBackColor = True
-        '
-        'Button_Backup_Restore
-        '
-        Me.Button_Backup_Restore.Location = New System.Drawing.Point(8, 202)
-        Me.Button_Backup_Restore.Name = "Button_Backup_Restore"
-        Me.Button_Backup_Restore.Size = New System.Drawing.Size(162, 23)
-        Me.Button_Backup_Restore.TabIndex = 8
-        Me.Button_Backup_Restore.Text = "Wiederherstellen"
-        Me.Button_Backup_Restore.UseVisualStyleBackColor = True
-        '
-        'TextBox_Backup_RestorePath
-        '
-        Me.TextBox_Backup_RestorePath.Location = New System.Drawing.Point(8, 176)
-        Me.TextBox_Backup_RestorePath.Name = "TextBox_Backup_RestorePath"
-        Me.TextBox_Backup_RestorePath.Size = New System.Drawing.Size(307, 20)
-        Me.TextBox_Backup_RestorePath.TabIndex = 9
-        '
-        'Button_Backup_RestorePath
-        '
-        Me.Button_Backup_RestorePath.Location = New System.Drawing.Point(321, 174)
-        Me.Button_Backup_RestorePath.Name = "Button_Backup_RestorePath"
-        Me.Button_Backup_RestorePath.Size = New System.Drawing.Size(100, 23)
-        Me.Button_Backup_RestorePath.TabIndex = 10
-        Me.Button_Backup_RestorePath.Text = "Backup-Datei"
-        Me.Button_Backup_RestorePath.UseVisualStyleBackColor = True
-        '
         'OpenFile_Backup
         '
         Me.OpenFile_Backup.Filter = "Backup|*.ab"
@@ -1461,7 +1485,6 @@ Partial Class Main
         Me.BackColor = System.Drawing.Color.White
         Me.BackgroundImage = CType(resources.GetObject("$this.BackgroundImage"), System.Drawing.Image)
         Me.ClientSize = New System.Drawing.Size(728, 401)
-        Me.Controls.Add(Me.PictureBox1)
         Me.Controls.Add(Me.TabControl1)
         Me.Controls.Add(Me.StatusStrip1)
         Me.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedSingle
@@ -1472,39 +1495,41 @@ Partial Class Main
         Me.StatusStrip1.ResumeLayout(False)
         Me.StatusStrip1.PerformLayout()
         Me.TabControl1.ResumeLayout(False)
-        Me.TabPage6.ResumeLayout(False)
+        Me.TabPage_Device.ResumeLayout(False)
         Me.GroupBox4.ResumeLayout(False)
         Me.GroupBox4.PerformLayout()
         Me.GroupBox3.ResumeLayout(False)
         Me.GroupBox3.PerformLayout()
         Me.GroupBox2.ResumeLayout(False)
         Me.GroupBox2.PerformLayout()
-        Me.TabPage1.ResumeLayout(False)
-        Me.TabPage1.PerformLayout()
-        Me.TabPage2.ResumeLayout(False)
-        Me.TabPage2.PerformLayout()
+        Me.TabPage_Filemanager.ResumeLayout(False)
+        Me.TabPage_Filemanager.PerformLayout()
+        Me.TabPage_Screen.ResumeLayout(False)
+        Me.TabPage_Screen.PerformLayout()
         Me.GroupBox1.ResumeLayout(False)
         Me.GroupBox1.PerformLayout()
         CType(Me.TrackBar_Bitrate, System.ComponentModel.ISupportInitialize).EndInit()
         CType(Me.TrackBar_RecTime, System.ComponentModel.ISupportInitialize).EndInit()
         CType(Me.Picture_Screen, System.ComponentModel.ISupportInitialize).EndInit()
-        Me.TabPage3.ResumeLayout(False)
-        Me.TabPage3.PerformLayout()
-        Me.TabPage4.ResumeLayout(False)
-        Me.TabPage4.PerformLayout()
-        Me.TabPage5.ResumeLayout(False)
-        Me.TabPage5.PerformLayout()
-        Me.TabPage7.ResumeLayout(False)
-        Me.TabPage7.PerformLayout()
-        Me.TabPage8.ResumeLayout(False)
-        Me.TabPage8.PerformLayout()
-        Me.TabPage10.ResumeLayout(False)
-        Me.TabPage10.PerformLayout()
-        Me.TabPage9.ResumeLayout(False)
-        Me.TabPage9.PerformLayout()
-        CType(Me.PictureBox1, System.ComponentModel.ISupportInitialize).EndInit()
-        Me.TabPage11.ResumeLayout(False)
-        Me.TabPage11.PerformLayout()
+        Me.TabPage_Restart.ResumeLayout(False)
+        Me.TabPage_Restart.PerformLayout()
+        Me.TabPage_Sideload.ResumeLayout(False)
+        Me.TabPage_Sideload.PerformLayout()
+        Me.TabPage_Apps.ResumeLayout(False)
+        Me.TabPage_Apps.PerformLayout()
+        Me.TabPage_Phone.ResumeLayout(False)
+        Me.TabPage_Phone.PerformLayout()
+        Me.TabPage_BuildProp.ResumeLayout(False)
+        Me.TabPage_BuildProp.PerformLayout()
+        Me.TabPage_Console.ResumeLayout(False)
+        Me.TabPage_Console.PerformLayout()
+        Me.TabPage_Backup.ResumeLayout(False)
+        Me.TabPage_Backup.PerformLayout()
+        Me.TabPageSettings.ResumeLayout(False)
+        Me.GroupBox6.ResumeLayout(False)
+        Me.GroupBox6.PerformLayout()
+        Me.TabPage_Help.ResumeLayout(False)
+        Me.TabPage_Help.PerformLayout()
         Me.ResumeLayout(False)
         Me.PerformLayout()
 
@@ -1512,8 +1537,8 @@ Partial Class Main
     Friend WithEvents StatusStrip1 As System.Windows.Forms.StatusStrip
     Friend WithEvents Label_Status As System.Windows.Forms.ToolStripStatusLabel
     Friend WithEvents TabControl1 As System.Windows.Forms.TabControl
-    Friend WithEvents TabPage1 As System.Windows.Forms.TabPage
-    Friend WithEvents TabPage2 As System.Windows.Forms.TabPage
+    Friend WithEvents TabPage_Filemanager As System.Windows.Forms.TabPage
+    Friend WithEvents TabPage_Screen As System.Windows.Forms.TabPage
     Friend WithEvents Label_DeviceName As System.Windows.Forms.ToolStripStatusLabel
     Friend WithEvents ProgressBar_Battery As System.Windows.Forms.ToolStripProgressBar
     Friend WithEvents Label_Battery As System.Windows.Forms.ToolStripStatusLabel
@@ -1537,7 +1562,7 @@ Partial Class Main
     Friend WithEvents CheckBox_Resolution As System.Windows.Forms.CheckBox
     Friend WithEvents CheckBox_RecOnPC As System.Windows.Forms.CheckBox
     Friend WithEvents Label5 As System.Windows.Forms.Label
-    Friend WithEvents TabPage3 As System.Windows.Forms.TabPage
+    Friend WithEvents TabPage_Restart As System.Windows.Forms.TabPage
     Friend WithEvents Label8 As System.Windows.Forms.Label
     Friend WithEvents Label7 As System.Windows.Forms.Label
     Friend WithEvents Label6 As System.Windows.Forms.Label
@@ -1546,7 +1571,7 @@ Partial Class Main
     Friend WithEvents Button_Fastboot As System.Windows.Forms.Button
     Friend WithEvents Button_Reboot As System.Windows.Forms.Button
     Friend WithEvents Label9 As System.Windows.Forms.Label
-    Friend WithEvents TabPage4 As System.Windows.Forms.TabPage
+    Friend WithEvents TabPage_Sideload As System.Windows.Forms.TabPage
     Friend WithEvents Button_RecoverySideload As System.Windows.Forms.Button
     Friend WithEvents Label10 As System.Windows.Forms.Label
     Friend WithEvents Button_SideloadSearch As System.Windows.Forms.Button
@@ -1556,8 +1581,8 @@ Partial Class Main
     Friend WithEvents OpenFileDialog As System.Windows.Forms.OpenFileDialog
     Friend WithEvents Label13 As System.Windows.Forms.Label
     Friend WithEvents Button_Sideload As System.Windows.Forms.Button
-    Friend WithEvents TabPage5 As System.Windows.Forms.TabPage
-    Friend WithEvents TabPage6 As System.Windows.Forms.TabPage
+    Friend WithEvents TabPage_Apps As System.Windows.Forms.TabPage
+    Friend WithEvents TabPage_Device As System.Windows.Forms.TabPage
     Friend WithEvents Label_device_manufacturer As System.Windows.Forms.Label
     Friend WithEvents Label14 As System.Windows.Forms.Label
     Friend WithEvents Label_device_device As System.Windows.Forms.Label
@@ -1576,7 +1601,7 @@ Partial Class Main
     Friend WithEvents Label20 As System.Windows.Forms.Label
     Friend WithEvents Label_device_busybox As System.Windows.Forms.Label
     Friend WithEvents Label21 As System.Windows.Forms.Label
-    Friend WithEvents TabPage7 As System.Windows.Forms.TabPage
+    Friend WithEvents TabPage_Phone As System.Windows.Forms.TabPage
     Friend WithEvents TextBox_Nummer As System.Windows.Forms.TextBox
     Friend WithEvents Label22 As System.Windows.Forms.Label
     Friend WithEvents Button_Call As System.Windows.Forms.Button
@@ -1591,7 +1616,6 @@ Partial Class Main
     Friend WithEvents Label_device_system As System.Windows.Forms.Label
     Friend WithEvents Label25 As System.Windows.Forms.Label
     Friend WithEvents Label_device_ownpath As System.Windows.Forms.Label
-    Friend WithEvents TextBox_OwnPath As System.Windows.Forms.TextBox
     Friend WithEvents Button_Uninstall As System.Windows.Forms.Button
     Friend WithEvents ScreenTimer As System.Windows.Forms.Timer
     Friend WithEvents TextBox_PathPC As System.Windows.Forms.TextBox
@@ -1611,7 +1635,7 @@ Partial Class Main
     Friend WithEvents TextBox_Apk As System.Windows.Forms.TextBox
     Friend WithEvents TextBox_Apps_Search As System.Windows.Forms.TextBox
     Friend WithEvents Label29 As System.Windows.Forms.Label
-    Friend WithEvents TabPage8 As System.Windows.Forms.TabPage
+    Friend WithEvents TabPage_BuildProp As System.Windows.Forms.TabPage
     Friend WithEvents Button_BuildPropRefresh As System.Windows.Forms.Button
     Friend WithEvents ListBox_BuildProp As System.Windows.Forms.ListBox
     Friend WithEvents TextBox_BuildPropSearch As System.Windows.Forms.TextBox
@@ -1621,16 +1645,15 @@ Partial Class Main
     Friend WithEvents Button_BuildPropSet As System.Windows.Forms.Button
     Friend WithEvents TextBox_BuildPropValue As System.Windows.Forms.TextBox
     Friend WithEvents Label32 As System.Windows.Forms.Label
-    Friend WithEvents TabPage9 As System.Windows.Forms.TabPage
+    Friend WithEvents TabPage_Help As System.Windows.Forms.TabPage
     Friend WithEvents Label34 As System.Windows.Forms.Label
     Friend WithEvents Label33 As System.Windows.Forms.Label
-    Friend WithEvents PictureBox1 As System.Windows.Forms.PictureBox
-    Friend WithEvents TabPage10 As System.Windows.Forms.TabPage
+    Friend WithEvents TabPage_Console As System.Windows.Forms.TabPage
     Friend WithEvents Label35 As System.Windows.Forms.Label
     Friend WithEvents Button_Command As System.Windows.Forms.Button
     Friend WithEvents TextBox_Command As System.Windows.Forms.TextBox
     Friend WithEvents TextBox_Command_Output As System.Windows.Forms.TextBox
-    Friend WithEvents TabPage11 As System.Windows.Forms.TabPage
+    Friend WithEvents TabPage_Backup As System.Windows.Forms.TabPage
     Friend WithEvents Button_Backup_Restore As System.Windows.Forms.Button
     Friend WithEvents Button_Backup_Backup As System.Windows.Forms.Button
     Friend WithEvents CheckBox_Backup_System As System.Windows.Forms.CheckBox
@@ -1643,5 +1666,9 @@ Partial Class Main
     Friend WithEvents Button_Backup_RestorePath As System.Windows.Forms.Button
     Friend WithEvents TextBox_Backup_RestorePath As System.Windows.Forms.TextBox
     Friend WithEvents OpenFile_Backup As System.Windows.Forms.OpenFileDialog
+    Friend WithEvents TabPageSettings As System.Windows.Forms.TabPage
+    Friend WithEvents TextBox_OwnPath As System.Windows.Forms.TextBox
+    Friend WithEvents GroupBox6 As System.Windows.Forms.GroupBox
+    Friend WithEvents Label_ownpath As System.Windows.Forms.Label
 
 End Class

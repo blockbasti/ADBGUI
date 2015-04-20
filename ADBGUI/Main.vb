@@ -21,6 +21,7 @@ Public Class Main
     Dim device_value_systemfree As String
     Dim device_value_ownpathfree As String
     Private Sub Main_Load(sender As Object, e As EventArgs) Handles MyBase.Load
+
         android = AndroidController.Instance
         TextBox_OwnPath.Text = My.Settings.OwnPath
         StatusWorker.RunWorkerAsync()
@@ -56,6 +57,7 @@ Public Class Main
         Label_device_intern.Text = device_value_internfree
         Label_device_system.Text = device_value_systemfree
         Label_device_ownpath.Text = device_value_ownpathfree
+        Label_ownpath.Text = TextBox_OwnPath.Text + ":"
         If StatusWorker.IsBusy = False Then StatusWorker.RunWorkerAsync()
     End Sub
 
@@ -226,7 +228,7 @@ Public Class Main
         ListBox_Apps.Sorted = True
     End Sub
 
-    Private Sub TextBox_OwnPath_MouseClick(sender As Object, e As MouseEventArgs) Handles TextBox_OwnPath.MouseClick
+    Private Sub TextBox_OwnPath_MouseClick(sender As Object, e As MouseEventArgs)
         TextBox_OwnPath.Text = ""
     End Sub
 
@@ -385,4 +387,10 @@ Public Class Main
     Private Sub Button_Backup_Restore_Click(sender As Object, e As EventArgs) Handles Button_Backup_Restore.Click
         Adb.ExecuteAdbCommand(Adb.FormAdbCommand("Restore " + TextBox_Backup_RestorePath.Text))
     End Sub
+    'Einstellung'
+    Private Sub CheckBox_Device_CheckedChanged(sender As Object, e As EventArgs)
+
+
+    End Sub
+
 End Class
