@@ -5,7 +5,7 @@ Public Class Main
     Dim android As AndroidController
     Dim device As Device
     Dim serial As String
-
+    Dim prev As String = ""
     'Variablen für Gerätestatus'
     Dim device_value_status As String
     Dim device_value_battery As Integer
@@ -24,6 +24,21 @@ Public Class Main
 
         android = AndroidController.Instance
         TextBox_OwnPath.Text = My.Settings.OwnPath
+        TextBox_Path_Internal.Text = My.Settings.InternalPath
+        TextBox_Path_SDCard.Text = My.Settings.SDPath
+        Select Case My.Settings.color
+            Case "blue"
+                RadioButton_blue.Checked = True
+            Case "green"
+                RadioButton_green.Checked = True
+            Case "grey"
+                RadioButton_grey.Checked = True
+            Case "purple"
+                RadioButton_purple.Checked = True
+            Case "red"
+                RadioButton_red.Checked = True
+        End Select
+        ChangeColor()
         StatusWorker.RunWorkerAsync()
         StatusTimer.Start()
         GetApps()
@@ -64,6 +79,10 @@ Public Class Main
     'Workerthread um die Verbindung etc. zu überprüfen. Gibt Werte für StatusTimer zurück.'
     Private Sub StatusWorker_DoWork(sender As Object, e As System.ComponentModel.DoWorkEventArgs) Handles StatusWorker.DoWork
         android.UpdateDeviceList()
+        ChangeColor()
+        My.Settings.OwnPath = TextBox_OwnPath.Text
+        My.Settings.InternalPath = TextBox_Path_Internal.Text
+        My.Settings.SDPath = TextBox_Path_SDCard.Text
         If android.HasConnectedDevices Then
             serial = android.ConnectedDevices(0)
             device = android.GetConnectedDevice(serial)
@@ -90,7 +109,6 @@ Public Class Main
                 device_value_internfree = df("/data")
                 device_value_systemfree = df("/system")
                 device_value_ownpathfree = df(TextBox_OwnPath.Text)
-                My.Settings.OwnPath = TextBox_OwnPath.Text
                 Select Case device.BusyBox.IsInstalled
                     Case True
                         device_value_busybox = "Ja(" + CStr(device.BusyBox.Version) + ")"
@@ -384,13 +402,107 @@ Public Class Main
         End If
     End Sub
 
-    Private Sub Button_Backup_Restore_Click(sender As Object, e As EventArgs) Handles Button_Backup_Restore.Click
-        Adb.ExecuteAdbCommand(Adb.FormAdbCommand("Restore " + TextBox_Backup_RestorePath.Text))
+    Sub ChangeColor()
+        Dim color As String
+        If RadioButton_blue.Checked Then
+            color = "blue"
+        End If
+        If RadioButton_green.Checked Then
+            color = "green"
+        End If
+        If RadioButton_grey.Checked Then
+            color = "grey"
+        End If
+        If RadioButton_purple.Checked Then
+            color = "purple"
+        End If
+        If RadioButton_red.Checked Then
+            color = "red"
+        End If
+        If color <> prev Then
+            Select Case color
+                Case "blue"
+                    My.Settings.color = "blue"
+                    TabPage_Apps.BackgroundImage = My.Resources.Background_blue
+                    TabPage_Backup.BackgroundImage = My.Resources.Background_blue
+                    TabPage_BuildProp.BackgroundImage = My.Resources.Background_blue
+                    TabPage_Console.BackgroundImage = My.Resources.Background_blue
+                    TabPage_Device.BackgroundImage = My.Resources.Background_blue
+                    TabPage_Filemanager.BackgroundImage = My.Resources.Background_blue
+                    TabPage_Help.BackgroundImage = My.Resources.Background_blue
+                    TabPage_Phone.BackgroundImage = My.Resources.Background_blue
+                    TabPage_Restart.BackgroundImage = My.Resources.Background_blue
+                    TabPage_Screen.BackgroundImage = My.Resources.Background_blue
+                    TabPage_Sideload.BackgroundImage = My.Resources.Background_blue
+                    TabPageSettings.BackgroundImage = My.Resources.Background_blue
+                    Me.BackgroundImage = My.Resources.Background_blue
+                    StatusStrip1.BackgroundImage = My.Resources.Background_blue
+                Case "green"
+                    My.Settings.color = "green"
+                    TabPage_Apps.BackgroundImage = My.Resources.Background_green
+                    TabPage_Backup.BackgroundImage = My.Resources.Background_green
+                    TabPage_BuildProp.BackgroundImage = My.Resources.Background_green
+                    TabPage_Console.BackgroundImage = My.Resources.Background_green
+                    TabPage_Device.BackgroundImage = My.Resources.Background_green
+                    TabPage_Filemanager.BackgroundImage = My.Resources.Background_green
+                    TabPage_Help.BackgroundImage = My.Resources.Background_green
+                    TabPage_Phone.BackgroundImage = My.Resources.Background_green
+                    TabPage_Restart.BackgroundImage = My.Resources.Background_green
+                    TabPage_Screen.BackgroundImage = My.Resources.Background_green
+                    TabPage_Sideload.BackgroundImage = My.Resources.Background_green
+                    TabPageSettings.BackgroundImage = My.Resources.Background_green
+                    Me.BackgroundImage = My.Resources.Background_green
+                    StatusStrip1.BackgroundImage = My.Resources.Background_green
+                Case "grey"
+                    My.Settings.color = "grey"
+                    TabPage_Apps.BackgroundImage = My.Resources.Background_grey
+                    TabPage_Backup.BackgroundImage = My.Resources.Background_grey
+                    TabPage_BuildProp.BackgroundImage = My.Resources.Background_grey
+                    TabPage_Console.BackgroundImage = My.Resources.Background_grey
+                    TabPage_Device.BackgroundImage = My.Resources.Background_grey
+                    TabPage_Filemanager.BackgroundImage = My.Resources.Background_grey
+                    TabPage_Help.BackgroundImage = My.Resources.Background_grey
+                    TabPage_Phone.BackgroundImage = My.Resources.Background_grey
+                    TabPage_Restart.BackgroundImage = My.Resources.Background_grey
+                    TabPage_Screen.BackgroundImage = My.Resources.Background_grey
+                    TabPage_Sideload.BackgroundImage = My.Resources.Background_grey
+                    TabPageSettings.BackgroundImage = My.Resources.Background_grey
+                    Me.BackgroundImage = My.Resources.Background_grey
+                    StatusStrip1.BackgroundImage = My.Resources.Background_grey
+                Case "purple"
+                    My.Settings.color = "purple"
+                    TabPage_Apps.BackgroundImage = My.Resources.Background_purple
+                    TabPage_Backup.BackgroundImage = My.Resources.Background_purple
+                    TabPage_BuildProp.BackgroundImage = My.Resources.Background_purple
+                    TabPage_Console.BackgroundImage = My.Resources.Background_purple
+                    TabPage_Device.BackgroundImage = My.Resources.Background_purple
+                    TabPage_Filemanager.BackgroundImage = My.Resources.Background_purple
+                    TabPage_Help.BackgroundImage = My.Resources.Background_purple
+                    TabPage_Phone.BackgroundImage = My.Resources.Background_purple
+                    TabPage_Restart.BackgroundImage = My.Resources.Background_purple
+                    TabPage_Screen.BackgroundImage = My.Resources.Background_purple
+                    TabPage_Sideload.BackgroundImage = My.Resources.Background_purple
+                    TabPageSettings.BackgroundImage = My.Resources.Background_purple
+                    Me.BackgroundImage = My.Resources.Background_purple
+                    StatusStrip1.BackgroundImage = My.Resources.Background_purple
+                Case "red"
+                    My.Settings.color = "red"
+                    TabPage_Apps.BackgroundImage = My.Resources.Background_red
+                    TabPage_Backup.BackgroundImage = My.Resources.Background_red
+                    TabPage_BuildProp.BackgroundImage = My.Resources.Background_red
+                    TabPage_Console.BackgroundImage = My.Resources.Background_red
+                    TabPage_Device.BackgroundImage = My.Resources.Background_red
+                    TabPage_Filemanager.BackgroundImage = My.Resources.Background_red
+                    TabPage_Help.BackgroundImage = My.Resources.Background_red
+                    TabPage_Phone.BackgroundImage = My.Resources.Background_red
+                    TabPage_Restart.BackgroundImage = My.Resources.Background_red
+                    TabPage_Screen.BackgroundImage = My.Resources.Background_red
+                    TabPage_Sideload.BackgroundImage = My.Resources.Background_red
+                    TabPageSettings.BackgroundImage = My.Resources.Background_red
+                    Me.BackgroundImage = My.Resources.Background_red
+                    StatusStrip1.BackgroundImage = My.Resources.Background_red
+            End Select
+        End If
+        prev = My.Settings.color
     End Sub
-    'Einstellung'
-    Private Sub CheckBox_Device_CheckedChanged(sender As Object, e As EventArgs)
-
-
-    End Sub
-
 End Class

@@ -23,8 +23,9 @@
     <UpdatePeriodically>false</UpdatePeriodically>
     <UpdateRequired>false</UpdateRequired>
     <MapFileExtensions>true</MapFileExtensions>
+    <TargetCulture>de-DE</TargetCulture>
     <ApplicationRevision>0</ApplicationRevision>
-    <ApplicationVersion>1.0.0.%2a</ApplicationVersion>
+    <ApplicationVersion>1.0.0.0</ApplicationVersion>
     <UseApplicationTrust>false</UseApplicationTrust>
     <PublishWizardCompleted>true</PublishWizardCompleted>
     <BootstrapperEnabled>true</BootstrapperEnabled>
@@ -87,6 +88,9 @@
   </PropertyGroup>
   <PropertyGroup>
     <SignManifests>false</SignManifests>
+  </PropertyGroup>
+  <PropertyGroup>
+    <SignAssembly>false</SignAssembly>
   </PropertyGroup>
   <ItemGroup>
     <Reference Include="AndroidLib, Version=1.5.2.0, Culture=neutral, processorArchitecture=MSIL">
@@ -179,7 +183,6 @@
     <None Include="AndroidLib.dll">
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
     </None>
-    <EmbeddedResource Include="Hintergrund2.jpg" />
     <EmbeddedResource Include="logo.ico" />
   </ItemGroup>
   <ItemGroup>
@@ -198,6 +201,14 @@
       <ProductName>.NET Framework 3.5 SP1</ProductName>
       <Install>false</Install>
     </BootstrapperPackage>
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="Background_blue.jpg" />
+    <EmbeddedResource Include="Background_green.jpg" />
+    <Content Include="Background_grey.jpg" />
+    <EmbeddedResource Include="Background_purple.jpg" />
+    <EmbeddedResource Include="Background_red.jpg" />
+    <EmbeddedResource Include="Hintergrund2.jpg" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.VisualBasic.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 

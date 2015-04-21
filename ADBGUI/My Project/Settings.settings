@@ -5,5 +5,14 @@
     <Setting Name="OwnPath" Type="System.String" Scope="User">
       <Value Profile="(Default)">Eigener Pfad</Value>
     </Setting>
+    <Setting Name="InternalPath" Type="System.String" Scope="User">
+      <Value Profile="(Default)">/data</Value>
+    </Setting>
+    <Setting Name="SDPath" Type="System.String" Scope="User">
+      <Value Profile="(Default)">/storage/sdcard1</Value>
+    </Setting>
+    <Setting Name="color" Type="System.String" Scope="User">
+      <Value Profile="(Default)">green</Value>
+    </Setting>
   </Settings>
 </SettingsFile>

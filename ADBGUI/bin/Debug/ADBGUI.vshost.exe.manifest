@@ -43,14 +43,14 @@
     </dependentAssembly>
   </dependency>
   <dependency>
-    <dependentAssembly dependencyType="install" allowDelayedBinding="true" codebase="ADBGUI.exe" size="404480">
+    <dependentAssembly dependencyType="install" allowDelayedBinding="true" codebase="ADBGUI.exe" size="325632">
       <assemblyIdentity name="ADBGUI" version="1.0.0.0" language="neutral" processorArchitecture="msil" />
       <hash>
         <dsig:Transforms>
           <dsig:Transform Algorithm="urn:schemas-microsoft-com:HashTransforms.Identity" />
         </dsig:Transforms>
         <dsig:DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha256" />
-        <dsig:DigestValue>hGdKFcJ69hK+qQZ2jTv5UvcoF0+MhDygzlKgm+35/O4=</dsig:DigestValue>
+        <dsig:DigestValue>9txC3mAjFL2XHX7U2sE9OFcN51vqEmLQqNKUsjg76k8=</dsig:DigestValue>
       </hash>
     </dependentAssembly>
   </dependency>
@@ -66,13 +66,13 @@
       </hash>
     </dependentAssembly>
   </dependency>
-  <file name="ADBGUI.exe.config" size="900">
+  <file name="ADBGUI.exe.config" size="1157">
     <hash>
       <dsig:Transforms>
         <dsig:Transform Algorithm="urn:schemas-microsoft-com:HashTransforms.Identity" />
       </dsig:Transforms>
       <dsig:DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha256" />
-      <dsig:DigestValue>3rnkz6V429VTxs36HXq9AjPdek3YXnq9Q+Ov0dWx9hg=</dsig:DigestValue>
+      <dsig:DigestValue>MOjyeV2vACwcqmUe5bwGam7INOQSZ31UqNjpRWaGxIw=</dsig:DigestValue>
     </hash>
   </file>
   <file name="logo.ico" size="32038">

@@ -146,7 +146,18 @@ Partial Class Main
         Me.Button_Backup_Target = New System.Windows.Forms.Button()
         Me.TextBox_Backup_Target = New System.Windows.Forms.TextBox()
         Me.TabPageSettings = New System.Windows.Forms.TabPage()
+        Me.GroupBox5 = New System.Windows.Forms.GroupBox()
+        Me.RadioButton_grey = New System.Windows.Forms.RadioButton()
+        Me.RadioButton_red = New System.Windows.Forms.RadioButton()
+        Me.RadioButton_purple = New System.Windows.Forms.RadioButton()
+        Me.RadioButton_blue = New System.Windows.Forms.RadioButton()
+        Me.RadioButton_green = New System.Windows.Forms.RadioButton()
         Me.GroupBox6 = New System.Windows.Forms.GroupBox()
+        Me.TextBox_Path_SDCard = New System.Windows.Forms.TextBox()
+        Me.TextBox_Path_Internal = New System.Windows.Forms.TextBox()
+        Me.Label38 = New System.Windows.Forms.Label()
+        Me.Label37 = New System.Windows.Forms.Label()
+        Me.Label36 = New System.Windows.Forms.Label()
         Me.TextBox_OwnPath = New System.Windows.Forms.TextBox()
         Me.TabPage_Help = New System.Windows.Forms.TabPage()
         Me.Label34 = New System.Windows.Forms.Label()
@@ -180,6 +191,7 @@ Partial Class Main
         Me.TabPage_Console.SuspendLayout()
         Me.TabPage_Backup.SuspendLayout()
         Me.TabPageSettings.SuspendLayout()
+        Me.GroupBox5.SuspendLayout()
         Me.GroupBox6.SuspendLayout()
         Me.TabPage_Help.SuspendLayout()
         Me.SuspendLayout()
@@ -1392,6 +1404,7 @@ Partial Class Main
         'TabPageSettings
         '
         Me.TabPageSettings.BackgroundImage = Global.ADBGUI.My.Resources.Resources.Hintergrund2
+        Me.TabPageSettings.Controls.Add(Me.GroupBox5)
         Me.TabPageSettings.Controls.Add(Me.GroupBox6)
         Me.TabPageSettings.Location = New System.Drawing.Point(4, 22)
         Me.TabPageSettings.Name = "TabPageSettings"
@@ -1401,21 +1414,133 @@ Partial Class Main
         Me.TabPageSettings.Text = "Einstellungen"
         Me.TabPageSettings.UseVisualStyleBackColor = True
         '
+        'GroupBox5
+        '
+        Me.GroupBox5.Controls.Add(Me.RadioButton_grey)
+        Me.GroupBox5.Controls.Add(Me.RadioButton_red)
+        Me.GroupBox5.Controls.Add(Me.RadioButton_purple)
+        Me.GroupBox5.Controls.Add(Me.RadioButton_blue)
+        Me.GroupBox5.Controls.Add(Me.RadioButton_green)
+        Me.GroupBox5.Location = New System.Drawing.Point(8, 105)
+        Me.GroupBox5.Name = "GroupBox5"
+        Me.GroupBox5.Size = New System.Drawing.Size(106, 134)
+        Me.GroupBox5.TabIndex = 10
+        Me.GroupBox5.TabStop = False
+        Me.GroupBox5.Text = "Hintergrundfarbe"
+        '
+        'RadioButton_grey
+        '
+        Me.RadioButton_grey.AutoSize = True
+        Me.RadioButton_grey.Location = New System.Drawing.Point(6, 111)
+        Me.RadioButton_grey.Name = "RadioButton_grey"
+        Me.RadioButton_grey.Size = New System.Drawing.Size(48, 17)
+        Me.RadioButton_grey.TabIndex = 4
+        Me.RadioButton_grey.Text = "Grau"
+        Me.RadioButton_grey.UseVisualStyleBackColor = True
+        '
+        'RadioButton_red
+        '
+        Me.RadioButton_red.AutoSize = True
+        Me.RadioButton_red.Location = New System.Drawing.Point(6, 88)
+        Me.RadioButton_red.Name = "RadioButton_red"
+        Me.RadioButton_red.Size = New System.Drawing.Size(42, 17)
+        Me.RadioButton_red.TabIndex = 3
+        Me.RadioButton_red.Text = "Rot"
+        Me.RadioButton_red.UseVisualStyleBackColor = True
+        '
+        'RadioButton_purple
+        '
+        Me.RadioButton_purple.AutoSize = True
+        Me.RadioButton_purple.Location = New System.Drawing.Point(6, 65)
+        Me.RadioButton_purple.Name = "RadioButton_purple"
+        Me.RadioButton_purple.Size = New System.Drawing.Size(41, 17)
+        Me.RadioButton_purple.TabIndex = 2
+        Me.RadioButton_purple.Text = "Lila"
+        Me.RadioButton_purple.UseVisualStyleBackColor = True
+        '
+        'RadioButton_blue
+        '
+        Me.RadioButton_blue.AutoSize = True
+        Me.RadioButton_blue.Location = New System.Drawing.Point(6, 42)
+        Me.RadioButton_blue.Name = "RadioButton_blue"
+        Me.RadioButton_blue.Size = New System.Drawing.Size(46, 17)
+        Me.RadioButton_blue.TabIndex = 1
+        Me.RadioButton_blue.Text = "Blau"
+        Me.RadioButton_blue.UseVisualStyleBackColor = True
+        '
+        'RadioButton_green
+        '
+        Me.RadioButton_green.AutoSize = True
+        Me.RadioButton_green.Checked = True
+        Me.RadioButton_green.Location = New System.Drawing.Point(6, 19)
+        Me.RadioButton_green.Name = "RadioButton_green"
+        Me.RadioButton_green.Size = New System.Drawing.Size(48, 17)
+        Me.RadioButton_green.TabIndex = 0
+        Me.RadioButton_green.TabStop = True
+        Me.RadioButton_green.Text = "Grün"
+        Me.RadioButton_green.UseVisualStyleBackColor = True
+        '
         'GroupBox6
         '
+        Me.GroupBox6.Controls.Add(Me.TextBox_Path_SDCard)
+        Me.GroupBox6.Controls.Add(Me.TextBox_Path_Internal)
+        Me.GroupBox6.Controls.Add(Me.Label38)
+        Me.GroupBox6.Controls.Add(Me.Label37)
+        Me.GroupBox6.Controls.Add(Me.Label36)
         Me.GroupBox6.Controls.Add(Me.TextBox_OwnPath)
         Me.GroupBox6.Location = New System.Drawing.Point(8, 6)
         Me.GroupBox6.Name = "GroupBox6"
-        Me.GroupBox6.Size = New System.Drawing.Size(200, 249)
+        Me.GroupBox6.Size = New System.Drawing.Size(190, 93)
         Me.GroupBox6.TabIndex = 9
         Me.GroupBox6.TabStop = False
         Me.GroupBox6.Text = "Pfade"
         '
+        'TextBox_Path_SDCard
+        '
+        Me.TextBox_Path_SDCard.Location = New System.Drawing.Point(83, 39)
+        Me.TextBox_Path_SDCard.Name = "TextBox_Path_SDCard"
+        Me.TextBox_Path_SDCard.Size = New System.Drawing.Size(100, 20)
+        Me.TextBox_Path_SDCard.TabIndex = 12
+        '
+        'TextBox_Path_Internal
+        '
+        Me.TextBox_Path_Internal.Location = New System.Drawing.Point(83, 13)
+        Me.TextBox_Path_Internal.Name = "TextBox_Path_Internal"
+        Me.TextBox_Path_Internal.Size = New System.Drawing.Size(100, 20)
+        Me.TextBox_Path_Internal.TabIndex = 11
+        '
+        'Label38
+        '
+        Me.Label38.AutoSize = True
+        Me.Label38.Location = New System.Drawing.Point(6, 68)
+        Me.Label38.Name = "Label38"
+        Me.Label38.Size = New System.Drawing.Size(71, 13)
+        Me.Label38.TabIndex = 10
+        Me.Label38.Text = "Eigener Pfad:"
+        '
+        'Label37
+        '
+        Me.Label37.AutoSize = True
+        Me.Label37.Location = New System.Drawing.Point(6, 42)
+        Me.Label37.Name = "Label37"
+        Me.Label37.Size = New System.Drawing.Size(53, 13)
+        Me.Label37.TabIndex = 9
+        Me.Label37.Text = "SD-Karte:"
+        '
+        'Label36
+        '
+        Me.Label36.AutoSize = True
+        Me.Label36.Location = New System.Drawing.Point(6, 16)
+        Me.Label36.Name = "Label36"
+        Me.Label36.Size = New System.Drawing.Size(37, 13)
+        Me.Label36.TabIndex = 8
+        Me.Label36.Text = "Intern:"
+        '
         'TextBox_OwnPath
         '
-        Me.TextBox_OwnPath.Location = New System.Drawing.Point(105, 117)
+        Me.TextBox_OwnPath.Location = New System.Drawing.Point(83, 65)
         Me.TextBox_OwnPath.Name = "TextBox_OwnPath"
-        Me.TextBox_OwnPath.Size = New System.Drawing.Size(66, 20)
+        Me.TextBox_OwnPath.Size = New System.Drawing.Size(100, 20)
         Me.TextBox_OwnPath.TabIndex = 7
         Me.TextBox_OwnPath.Text = "Eigener Pfad"
         '
@@ -1526,6 +1651,8 @@ Partial Class Main
         Me.TabPage_Backup.ResumeLayout(False)
         Me.TabPage_Backup.PerformLayout()
         Me.TabPageSettings.ResumeLayout(False)
+        Me.GroupBox5.ResumeLayout(False)
+        Me.GroupBox5.PerformLayout()
         Me.GroupBox6.ResumeLayout(False)
         Me.GroupBox6.PerformLayout()
         Me.TabPage_Help.ResumeLayout(False)
@@ -1670,5 +1797,16 @@ Partial Class Main
     Friend WithEvents TextBox_OwnPath As System.Windows.Forms.TextBox
     Friend WithEvents GroupBox6 As System.Windows.Forms.GroupBox
     Friend WithEvents Label_ownpath As System.Windows.Forms.Label
+    Friend WithEvents TextBox_Path_SDCard As System.Windows.Forms.TextBox
+    Friend WithEvents TextBox_Path_Internal As System.Windows.Forms.TextBox
+    Friend WithEvents Label38 As System.Windows.Forms.Label
+    Friend WithEvents Label37 As System.Windows.Forms.Label
+    Friend WithEvents Label36 As System.Windows.Forms.Label
+    Friend WithEvents GroupBox5 As System.Windows.Forms.GroupBox
+    Friend WithEvents RadioButton_grey As System.Windows.Forms.RadioButton
+    Friend WithEvents RadioButton_red As System.Windows.Forms.RadioButton
+    Friend WithEvents RadioButton_purple As System.Windows.Forms.RadioButton
+    Friend WithEvents RadioButton_blue As System.Windows.Forms.RadioButton
+    Friend WithEvents RadioButton_green As System.Windows.Forms.RadioButton
 
 End Class
