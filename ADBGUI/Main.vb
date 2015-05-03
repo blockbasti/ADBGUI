@@ -42,7 +42,6 @@ Public Class Main
         StatusWorker.RunWorkerAsync()
         StatusTimer.Start()
         GetApps()
-
         ScreenTimer.Start()
     End Sub
     Private Sub Main_FormClosed(sender As Object, e As FormClosedEventArgs) Handles Me.FormClosed
@@ -105,8 +104,8 @@ Public Class Main
                 device_value_temperature = device.Battery.Temperature / 10
                 device_value_battery_technology = device.Battery.Technology
                 device_value_codename = device.BuildProp.GetProp("ro.product.name")
-                device_value_sdfree = df("/storage/sdcard1")
-                device_value_internfree = df("/data")
+                device_value_sdfree = df(TextBox_Path_SDCard.Text)
+                device_value_internfree = df(TextBox_Path_Internal.Text)
                 device_value_systemfree = df("/system")
                 device_value_ownpathfree = df(TextBox_OwnPath.Text)
                 Select Case device.BusyBox.IsInstalled
@@ -214,7 +213,7 @@ Public Class Main
         device.Phone.DialPhoneNumber(TextBox_Nummer.Text)
     End Sub
 
-    Private Sub Button_Call_Click(sender As Object, e As EventArgs) Handles Button_Call.Click
+    Private Sub Button_Call_Click(sender As Object, e As EventArgs)
         device.Phone.CallPhoneNumber(TextBox_Nummer.Text)
     End Sub
 
@@ -361,6 +360,7 @@ Public Class Main
     End Sub
 
     Private Sub Button_Backup_Backup_Click(sender As Object, e As EventArgs) Handles Button_Backup_Backup.Click
+        MessageBox.Show("Bitte bestätigen sie die Meldung auf ihrem Smartphone!")
         Backup()
     End Sub
 
@@ -385,7 +385,7 @@ Public Class Main
         If CheckBox_Backup_All.Checked Then
             Args = " -all"
         End If
-        Adb.ExecuteAdbCommand(Adb.FormAdbCommand("backup -f " + TextBox_Backup_Target.Text + "Backup.ab " + Args))
+        Adb.ExecuteAdbCommand(Adb.FormAdbCommand("backup -f " + TextBox_Backup_Target.Text + "\Backup.ab " + Args))
     End Sub
 
     Private Sub CheckBox_Backup_All_CheckedChanged(sender As Object, e As EventArgs) Handles CheckBox_Backup_All.CheckedChanged

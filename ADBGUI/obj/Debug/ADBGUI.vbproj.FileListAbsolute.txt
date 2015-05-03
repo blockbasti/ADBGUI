@@ -1,10 +1,9 @@
-S:\Dokumente\Visual Studio 2013\Projects\ADBGUI\ADBGUI\bin\Debug\ADBGUI.exe.config
 S:\Dokumente\Visual Studio 2013\Projects\ADBGUI\ADBGUI\bin\Debug\AndroidLib.dll
-S:\Dokumente\Visual Studio 2013\Projects\ADBGUI\ADBGUI\bin\Debug\ADBGUI.exe.manifest
-S:\Dokumente\Visual Studio 2013\Projects\ADBGUI\ADBGUI\bin\Debug\ADBGUI.application
 S:\Dokumente\Visual Studio 2013\Projects\ADBGUI\ADBGUI\bin\Debug\ADBGUI.exe
 S:\Dokumente\Visual Studio 2013\Projects\ADBGUI\ADBGUI\bin\Debug\ADBGUI.pdb
-S:\Dokumente\Visual Studio 2013\Projects\ADBGUI\ADBGUI\obj\Debug\ADBGUI.vbprojResolveAssemblyReference.cache
+S:\Dokumente\Visual Studio 2013\Projects\ADBGUI\ADBGUI\bin\Debug\ADBGUI.exe.config
+S:\Dokumente\Visual Studio 2013\Projects\ADBGUI\ADBGUI\bin\Debug\ADBGUI.exe.manifest
+S:\Dokumente\Visual Studio 2013\Projects\ADBGUI\ADBGUI\bin\Debug\ADBGUI.application
 S:\Dokumente\Visual Studio 2013\Projects\ADBGUI\ADBGUI\obj\Debug\ADBGUI.Main.resources
 S:\Dokumente\Visual Studio 2013\Projects\ADBGUI\ADBGUI\obj\Debug\ADBGUI.Resources.resources
 S:\Dokumente\Visual Studio 2013\Projects\ADBGUI\ADBGUI\obj\Debug\ADBGUI.SplashScreen1.resources
@@ -14,3 +13,4 @@ S:\Dokumente\Visual Studio 2013\Projects\ADBGUI\ADBGUI\obj\Debug\ADBGUI.exe.mani
 S:\Dokumente\Visual Studio 2013\Projects\ADBGUI\ADBGUI\obj\Debug\ADBGUI.application
 S:\Dokumente\Visual Studio 2013\Projects\ADBGUI\ADBGUI\obj\Debug\ADBGUI.exe
 S:\Dokumente\Visual Studio 2013\Projects\ADBGUI\ADBGUI\obj\Debug\ADBGUI.pdb
+S:\Dokumente\Visual Studio 2013\Projects\ADBGUI\ADBGUI\obj\Debug\ADBGUI.vbprojResolveAssemblyReference.cache

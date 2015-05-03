@@ -114,7 +114,6 @@ Partial Class Main
         Me.Button_Apps_Refresh = New System.Windows.Forms.Button()
         Me.ListBox_Apps = New System.Windows.Forms.ListBox()
         Me.TabPage_Phone = New System.Windows.Forms.TabPage()
-        Me.Button_Call = New System.Windows.Forms.Button()
         Me.Button_Dial = New System.Windows.Forms.Button()
         Me.TextBox_Nummer = New System.Windows.Forms.TextBox()
         Me.Label22 = New System.Windows.Forms.Label()
@@ -1090,7 +1089,6 @@ Partial Class Main
         'TabPage_Phone
         '
         Me.TabPage_Phone.BackgroundImage = Global.ADBGUI.My.Resources.Resources.Hintergrund2
-        Me.TabPage_Phone.Controls.Add(Me.Button_Call)
         Me.TabPage_Phone.Controls.Add(Me.Button_Dial)
         Me.TabPage_Phone.Controls.Add(Me.TextBox_Nummer)
         Me.TabPage_Phone.Controls.Add(Me.Label22)
@@ -1101,15 +1099,6 @@ Partial Class Main
         Me.TabPage_Phone.TabIndex = 6
         Me.TabPage_Phone.Text = "Telefon"
         Me.TabPage_Phone.UseVisualStyleBackColor = True
-        '
-        'Button_Call
-        '
-        Me.Button_Call.Location = New System.Drawing.Point(6, 61)
-        Me.Button_Call.Name = "Button_Call"
-        Me.Button_Call.Size = New System.Drawing.Size(232, 23)
-        Me.Button_Call.TabIndex = 3
-        Me.Button_Call.Text = "Wählen und Anrufen"
-        Me.Button_Call.UseVisualStyleBackColor = True
         '
         'Button_Dial
         '
@@ -1731,7 +1720,6 @@ Partial Class Main
     Friend WithEvents TabPage_Phone As System.Windows.Forms.TabPage
     Friend WithEvents TextBox_Nummer As System.Windows.Forms.TextBox
     Friend WithEvents Label22 As System.Windows.Forms.Label
-    Friend WithEvents Button_Call As System.Windows.Forms.Button
     Friend WithEvents Button_Dial As System.Windows.Forms.Button
     Friend WithEvents GroupBox4 As System.Windows.Forms.GroupBox
     Friend WithEvents Button_Apps_Refresh As System.Windows.Forms.Button
