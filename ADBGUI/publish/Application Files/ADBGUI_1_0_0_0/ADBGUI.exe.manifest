@@ -43,14 +43,14 @@
     </dependentAssembly>
   </dependency>
   <dependency>
-    <dependentAssembly dependencyType="install" allowDelayedBinding="true" codebase="ADBGUI.exe" size="625664">
+    <dependentAssembly dependencyType="install" allowDelayedBinding="true" codebase="ADBGUI.exe" size="627200">
       <assemblyIdentity name="ADBGUI" version="1.0.0.0" language="neutral" processorArchitecture="msil" />
       <hash>
         <dsig:Transforms>
           <dsig:Transform Algorithm="urn:schemas-microsoft-com:HashTransforms.Identity" />
         </dsig:Transforms>
         <dsig:DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha256" />
-        <dsig:DigestValue>leLoUG6cZ3MY8LZ2CX/z9GdWtiaiE55QHGF1n1inJhI=</dsig:DigestValue>
+        <dsig:DigestValue>BtKoyem/xYoGi0j9k7nYLLHV1FNnXwzrt27MwZyRSQ4=</dsig:DigestValue>
       </hash>
     </dependentAssembly>
   </dependency>

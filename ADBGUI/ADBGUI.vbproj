@@ -40,7 +40,7 @@
     <DocumentationFile>
     </DocumentationFile>
     <NoWarn>42016,41999,42017,42018,42019,42032,42036,42020,42021,42022</NoWarn>
-    <WarningLevel>1</WarningLevel>
+    <WarningLevel>0</WarningLevel>
     <Optimize>true</Optimize>
   </PropertyGroup>
   <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
@@ -53,7 +53,7 @@
     <DocumentationFile>
     </DocumentationFile>
     <NoWarn>42016,41999,42017,42018,42019,42032,42036,42020,42021,42022</NoWarn>
-    <WarningLevel>1</WarningLevel>
+    <WarningLevel>0</WarningLevel>
     <CodeAnalysisRuleSet>AllRules.ruleset</CodeAnalysisRuleSet>
   </PropertyGroup>
   <PropertyGroup>
@@ -203,12 +203,12 @@
     </BootstrapperPackage>
   </ItemGroup>
   <ItemGroup>
-    <EmbeddedResource Include="Background_blue.jpg" />
-    <EmbeddedResource Include="Background_green.jpg" />
+    <Content Include="Background_blue.jpg" />
+    <Content Include="Background_green.jpg" />
     <Content Include="Background_grey.jpg" />
-    <EmbeddedResource Include="Background_purple.jpg" />
-    <EmbeddedResource Include="Background_red.jpg" />
-    <EmbeddedResource Include="Hintergrund2.jpg" />
+    <Content Include="Background_purple.jpg" />
+    <Content Include="Background_red.jpg" />
+    <Content Include="Hintergrund2.jpg" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.VisualBasic.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 

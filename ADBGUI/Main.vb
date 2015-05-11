@@ -20,13 +20,10 @@ Public Class Main
     Dim device_value_internfree As String
     Dim device_value_systemfree As String
     Dim device_value_ownpathfree As String
+    Dim color As String
     Private Sub Main_Load(sender As Object, e As EventArgs) Handles MyBase.Load
-
         android = AndroidController.Instance
-        TextBox_OwnPath.Text = My.Settings.OwnPath
-        TextBox_Path_Internal.Text = My.Settings.InternalPath
-        TextBox_Path_SDCard.Text = My.Settings.SDPath
-        Select Case My.Settings.color
+        Select Case GetSetting("ADBGUI", "Settings", "color")
             Case "blue"
                 RadioButton_blue.Checked = True
             Case "green"
@@ -41,16 +38,21 @@ Public Class Main
         ChangeColor()
         StatusWorker.RunWorkerAsync()
         StatusTimer.Start()
+        TextBox_OwnPath.Text = GetSetting("ADBGUI", "Settings", "OwnPath")
+        TextBox_Path_Internal.Text = GetSetting("ADBGUI", "Settings", "InternalPath")
+        TextBox_Path_SDCard.Text = GetSetting("ADBGUI", "Settings", "SDPath")
         GetApps()
         ScreenTimer.Start()
     End Sub
     Private Sub Main_FormClosed(sender As Object, e As FormClosedEventArgs) Handles Me.FormClosed
-        android.Dispose()
+        Adb.ExecuteAdbCommandNoReturn(Adb.FormAdbCommand("shell rm /sdcard/screen.png"))
+        Adb.ExecuteAdbCommandNoReturn(Adb.FormAdbCommand("shell rm /sdcard/screen2.png"))
         'Löscht evtl. das verbleibende Bild der Bildschirmübertragung.'
         Picture_Screen.Dispose()
         If System.IO.File.Exists(Application.StartupPath + "/screen.png") = True Then
             System.IO.File.Delete(Application.StartupPath + "/screen.png")
         End If
+        android.Dispose()
     End Sub
 
     'Timer um die Statusleiste zu aktualisieren.'
@@ -79,9 +81,18 @@ Public Class Main
     Private Sub StatusWorker_DoWork(sender As Object, e As System.ComponentModel.DoWorkEventArgs) Handles StatusWorker.DoWork
         android.UpdateDeviceList()
         ChangeColor()
-        My.Settings.OwnPath = TextBox_OwnPath.Text
-        My.Settings.InternalPath = TextBox_Path_Internal.Text
-        My.Settings.SDPath = TextBox_Path_SDCard.Text
+        If (GetSetting("ADBGUI", "Settings", "OwnPath") = "") Or (GetSetting("ADBGUI", "Settings", "SDPath") = "") Or (GetSetting("ADBGUI", "Settings", "InternalPath") = "") Then
+            SaveSetting("ADBGUI", "Settings", "OwnPath", "Eigener Pfad")
+            SaveSetting("ADBGUI", "Settings", "InternalPath", "/data")
+            SaveSetting("ADBGUI", "Settings", "SDPath", "/storage/sdcard1")
+            TextBox_OwnPath.Text = GetSetting("ADBGUI", "Settings", "OwnPath")
+            TextBox_Path_Internal.Text = GetSetting("ADBGUI", "Settings", "InternalPath")
+            TextBox_Path_SDCard.Text = GetSetting("ADBGUI", "Settings", "SDPath")
+        Else
+            SaveSetting("ADBGUI", "Settings", "OwnPath", TextBox_OwnPath.Text)
+            SaveSetting("ADBGUI", "Settings", "InternalPath", TextBox_Path_Internal.Text)
+            SaveSetting("ADBGUI", "Settings", "SDPath", TextBox_Path_SDCard.Text)
+        End If
         If android.HasConnectedDevices Then
             serial = android.ConnectedDevices(0)
             device = android.GetConnectedDevice(serial)
@@ -104,10 +115,10 @@ Public Class Main
                 device_value_temperature = device.Battery.Temperature / 10
                 device_value_battery_technology = device.Battery.Technology
                 device_value_codename = device.BuildProp.GetProp("ro.product.name")
-                device_value_sdfree = df(TextBox_Path_SDCard.Text)
-                device_value_internfree = df(TextBox_Path_Internal.Text)
+                device_value_sdfree = df(GetSetting("ADBGUI", "Settings", "SDPath"))
+                device_value_internfree = df(GetSetting("ADBGUI", "Settings", "InternalPath"))
                 device_value_systemfree = df("/system")
-                device_value_ownpathfree = df(TextBox_OwnPath.Text)
+                device_value_ownpathfree = df(GetSetting("ADBGUI", "Settings", "OwnPath"))
                 Select Case device.BusyBox.IsInstalled
                     Case True
                         device_value_busybox = "Ja(" + CStr(device.BusyBox.Version) + ")"
@@ -260,6 +271,7 @@ Public Class Main
                 ScreenWorker.RunWorkerAsync()
             End If
         End If
+
     End Sub
     'Dateimanager'
     Private Sub Button_PushFile_Click(sender As Object, e As EventArgs) Handles Button_PushFile.Click
@@ -403,7 +415,6 @@ Public Class Main
     End Sub
 
     Sub ChangeColor()
-        Dim color As String
         If RadioButton_blue.Checked Then
             color = "blue"
         End If
@@ -422,7 +433,7 @@ Public Class Main
         If color <> prev Then
             Select Case color
                 Case "blue"
-                    My.Settings.color = "blue"
+                    SaveSetting("ADBGUI", "Settings", "color", color)
                     TabPage_Apps.BackgroundImage = My.Resources.Background_blue
                     TabPage_Backup.BackgroundImage = My.Resources.Background_blue
                     TabPage_BuildProp.BackgroundImage = My.Resources.Background_blue
@@ -438,7 +449,7 @@ Public Class Main
                     Me.BackgroundImage = My.Resources.Background_blue
                     StatusStrip1.BackgroundImage = My.Resources.Background_blue
                 Case "green"
-                    My.Settings.color = "green"
+                    SaveSetting("ADBGUI", "Settings", "color", color)
                     TabPage_Apps.BackgroundImage = My.Resources.Background_green
                     TabPage_Backup.BackgroundImage = My.Resources.Background_green
                     TabPage_BuildProp.BackgroundImage = My.Resources.Background_green
@@ -454,7 +465,7 @@ Public Class Main
                     Me.BackgroundImage = My.Resources.Background_green
                     StatusStrip1.BackgroundImage = My.Resources.Background_green
                 Case "grey"
-                    My.Settings.color = "grey"
+                    SaveSetting("ADBGUI", "Settings", "color", color)
                     TabPage_Apps.BackgroundImage = My.Resources.Background_grey
                     TabPage_Backup.BackgroundImage = My.Resources.Background_grey
                     TabPage_BuildProp.BackgroundImage = My.Resources.Background_grey
@@ -470,7 +481,7 @@ Public Class Main
                     Me.BackgroundImage = My.Resources.Background_grey
                     StatusStrip1.BackgroundImage = My.Resources.Background_grey
                 Case "purple"
-                    My.Settings.color = "purple"
+                    SaveSetting("ADBGUI", "Settings", "color", color)
                     TabPage_Apps.BackgroundImage = My.Resources.Background_purple
                     TabPage_Backup.BackgroundImage = My.Resources.Background_purple
                     TabPage_BuildProp.BackgroundImage = My.Resources.Background_purple
@@ -486,7 +497,7 @@ Public Class Main
                     Me.BackgroundImage = My.Resources.Background_purple
                     StatusStrip1.BackgroundImage = My.Resources.Background_purple
                 Case "red"
-                    My.Settings.color = "red"
+                    SaveSetting("ADBGUI", "Settings", "color", color)
                     TabPage_Apps.BackgroundImage = My.Resources.Background_red
                     TabPage_Backup.BackgroundImage = My.Resources.Background_red
                     TabPage_BuildProp.BackgroundImage = My.Resources.Background_red
@@ -503,6 +514,19 @@ Public Class Main
                     StatusStrip1.BackgroundImage = My.Resources.Background_red
             End Select
         End If
-        prev = My.Settings.color
+        prev = GetSetting("ADBGUI", "Settings", "color")
     End Sub
+
+    Private Sub LinkLabel1_LinkClicked(sender As Object, e As LinkLabelLinkClickedEventArgs) Handles LinkLabel1.LinkClicked
+        Process.Start("http://forum.xda-developers.com/showthread.php?p=48915118")
+    End Sub
+
+    Private Sub LinkLabel2_LinkClicked(sender As Object, e As LinkLabelLinkClickedEventArgs) Handles LinkLabel2.LinkClicked
+        Process.Start("http://developer.android.com/sdk/win-usb.html")
+    End Sub
+
+    Private Sub Button_Delete_Click(sender As Object, e As EventArgs) Handles Button_Delete.Click
+        Adb.ExecuteAdbCommandNoReturn(Adb.FormAdbCommand("shell rm " + TextBox_PathPhone.Text))
+    End Sub
+
 End Class

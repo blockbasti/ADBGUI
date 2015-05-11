@@ -53,54 +53,6 @@ Namespace My
                 Return defaultInstance
             End Get
         End Property
-        
-        <Global.System.Configuration.UserScopedSettingAttribute(),  _
-         Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
-         Global.System.Configuration.DefaultSettingValueAttribute("Eigener Pfad")>  _
-        Public Property OwnPath() As String
-            Get
-                Return CType(Me("OwnPath"),String)
-            End Get
-            Set
-                Me("OwnPath") = value
-            End Set
-        End Property
-        
-        <Global.System.Configuration.UserScopedSettingAttribute(),  _
-         Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
-         Global.System.Configuration.DefaultSettingValueAttribute("/data")>  _
-        Public Property InternalPath() As String
-            Get
-                Return CType(Me("InternalPath"),String)
-            End Get
-            Set
-                Me("InternalPath") = value
-            End Set
-        End Property
-        
-        <Global.System.Configuration.UserScopedSettingAttribute(),  _
-         Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
-         Global.System.Configuration.DefaultSettingValueAttribute("/storage/sdcard1")>  _
-        Public Property SDPath() As String
-            Get
-                Return CType(Me("SDPath"),String)
-            End Get
-            Set
-                Me("SDPath") = value
-            End Set
-        End Property
-        
-        <Global.System.Configuration.UserScopedSettingAttribute(),  _
-         Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
-         Global.System.Configuration.DefaultSettingValueAttribute("green")>  _
-        Public Property color() As String
-            Get
-                Return CType(Me("color"),String)
-            End Get
-            Set
-                Me("color") = value
-            End Set
-        End Property
     End Class
 End Namespace
 

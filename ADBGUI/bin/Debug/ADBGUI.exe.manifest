@@ -43,14 +43,14 @@
     </dependentAssembly>
   </dependency>
   <dependency>
-    <dependentAssembly dependencyType="install" allowDelayedBinding="true" codebase="ADBGUI.exe" size="625152">
+    <dependentAssembly dependencyType="install" allowDelayedBinding="true" codebase="ADBGUI.exe" size="443392">
       <assemblyIdentity name="ADBGUI" version="1.0.0.0" language="neutral" processorArchitecture="msil" />
       <hash>
         <dsig:Transforms>
           <dsig:Transform Algorithm="urn:schemas-microsoft-com:HashTransforms.Identity" />
         </dsig:Transforms>
         <dsig:DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha256" />
-        <dsig:DigestValue>HoHLimjfwW3HQw/ha4NkY4rY3DxMgYBmSTULpXRqnes=</dsig:DigestValue>
+        <dsig:DigestValue>gD5EiTjKn9sG9hpgWYWZP8x7yvT0eJmECUq+7LPR49s=</dsig:DigestValue>
       </hash>
     </dependentAssembly>
   </dependency>
@@ -66,13 +66,31 @@
       </hash>
     </dependentAssembly>
   </dependency>
-  <file name="ADBGUI.exe.config" size="1276">
+  <file name="ADBGUI.exe.config" size="231">
     <hash>
       <dsig:Transforms>
         <dsig:Transform Algorithm="urn:schemas-microsoft-com:HashTransforms.Identity" />
       </dsig:Transforms>
       <dsig:DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha256" />
-      <dsig:DigestValue>WnNfORTCjwWXBvrP2NLJAeDGK91B3ox6GZivT2TTry4=</dsig:DigestValue>
+      <dsig:DigestValue>3kMR14I492SGHM3ENkovtFG0+GRFOanBVwmyCFv3r1w=</dsig:DigestValue>
+    </hash>
+  </file>
+  <file name="Background_blue.jpg" size="37089">
+    <hash>
+      <dsig:Transforms>
+        <dsig:Transform Algorithm="urn:schemas-microsoft-com:HashTransforms.Identity" />
+      </dsig:Transforms>
+      <dsig:DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha256" />
+      <dsig:DigestValue>SbpRTsiJFsJimmgQ7wBW6v5tqZbyoyjWk52SqEyvxV4=</dsig:DigestValue>
+    </hash>
+  </file>
+  <file name="Background_green.jpg" size="36258">
+    <hash>
+      <dsig:Transforms>
+        <dsig:Transform Algorithm="urn:schemas-microsoft-com:HashTransforms.Identity" />
+      </dsig:Transforms>
+      <dsig:DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha256" />
+      <dsig:DigestValue>CQ63xJUgp+bXPtUwAlttHKrBg/CD/6o6GFrosxcGhZE=</dsig:DigestValue>
     </hash>
   </file>
   <file name="Background_grey.jpg" size="33710">
@@ -82,6 +100,33 @@
       </dsig:Transforms>
       <dsig:DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha256" />
       <dsig:DigestValue>icELd3iA/lchH9Hyv2/CCxDcZF1t7DcgTqs/7WEtMWw=</dsig:DigestValue>
+    </hash>
+  </file>
+  <file name="Background_purple.jpg" size="37433">
+    <hash>
+      <dsig:Transforms>
+        <dsig:Transform Algorithm="urn:schemas-microsoft-com:HashTransforms.Identity" />
+      </dsig:Transforms>
+      <dsig:DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha256" />
+      <dsig:DigestValue>s61UPaWe/+2w/3PZt8kZPwMMJFhZ/+kAuzw3yNFkTNc=</dsig:DigestValue>
+    </hash>
+  </file>
+  <file name="Background_red.jpg" size="37199">
+    <hash>
+      <dsig:Transforms>
+        <dsig:Transform Algorithm="urn:schemas-microsoft-com:HashTransforms.Identity" />
+      </dsig:Transforms>
+      <dsig:DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha256" />
+      <dsig:DigestValue>oKCyd0SrpXrOZt9iQ2r2wMx+gm4bTpMyXTxg9ylhMEs=</dsig:DigestValue>
+    </hash>
+  </file>
+  <file name="Hintergrund2.jpg" size="36258">
+    <hash>
+      <dsig:Transforms>
+        <dsig:Transform Algorithm="urn:schemas-microsoft-com:HashTransforms.Identity" />
+      </dsig:Transforms>
+      <dsig:DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha256" />
+      <dsig:DigestValue>CQ63xJUgp+bXPtUwAlttHKrBg/CD/6o6GFrosxcGhZE=</dsig:DigestValue>
     </hash>
   </file>
   <file name="logo.ico" size="32038">

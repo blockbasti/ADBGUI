@@ -159,6 +159,9 @@ Partial Class Main
         Me.Label36 = New System.Windows.Forms.Label()
         Me.TextBox_OwnPath = New System.Windows.Forms.TextBox()
         Me.TabPage_Help = New System.Windows.Forms.TabPage()
+        Me.LinkLabel2 = New System.Windows.Forms.LinkLabel()
+        Me.LinkLabel1 = New System.Windows.Forms.LinkLabel()
+        Me.Label39 = New System.Windows.Forms.Label()
         Me.Label34 = New System.Windows.Forms.Label()
         Me.Label33 = New System.Windows.Forms.Label()
         Me.StatusTimer = New System.Windows.Forms.Timer(Me.components)
@@ -170,6 +173,8 @@ Partial Class Main
         Me.FolderBrowserPull = New System.Windows.Forms.FolderBrowserDialog()
         Me.OpenFile_Apk = New System.Windows.Forms.OpenFileDialog()
         Me.OpenFile_Backup = New System.Windows.Forms.OpenFileDialog()
+        Me.Button_Delete = New System.Windows.Forms.Button()
+        Me.Label40 = New System.Windows.Forms.Label()
         Me.StatusStrip1.SuspendLayout()
         Me.TabControl1.SuspendLayout()
         Me.TabPage_Device.SuspendLayout()
@@ -223,6 +228,7 @@ Partial Class Main
         Me.ProgressBar_Battery.Name = "ProgressBar_Battery"
         Me.ProgressBar_Battery.Size = New System.Drawing.Size(100, 16)
         Me.ProgressBar_Battery.Step = 1
+        Me.ProgressBar_Battery.Style = System.Windows.Forms.ProgressBarStyle.Continuous
         '
         'Label_Battery
         '
@@ -536,6 +542,7 @@ Partial Class Main
         'TabPage_Filemanager
         '
         Me.TabPage_Filemanager.BackgroundImage = CType(resources.GetObject("TabPage_Filemanager.BackgroundImage"), System.Drawing.Image)
+        Me.TabPage_Filemanager.Controls.Add(Me.Button_Delete)
         Me.TabPage_Filemanager.Controls.Add(Me.Button_PullDirectory)
         Me.TabPage_Filemanager.Controls.Add(Me.Button_PushFile)
         Me.TabPage_Filemanager.Controls.Add(Me.Button_Push)
@@ -904,6 +911,7 @@ Partial Class Main
         'TabPage_Sideload
         '
         Me.TabPage_Sideload.BackgroundImage = Global.ADBGUI.My.Resources.Resources.Hintergrund2
+        Me.TabPage_Sideload.Controls.Add(Me.Label40)
         Me.TabPage_Sideload.Controls.Add(Me.Label13)
         Me.TabPage_Sideload.Controls.Add(Me.Button_Sideload)
         Me.TabPage_Sideload.Controls.Add(Me.Button_SideloadSearch)
@@ -1537,6 +1545,9 @@ Partial Class Main
         '
         Me.TabPage_Help.BackColor = System.Drawing.Color.Transparent
         Me.TabPage_Help.BackgroundImage = Global.ADBGUI.My.Resources.Resources.Hintergrund2
+        Me.TabPage_Help.Controls.Add(Me.LinkLabel2)
+        Me.TabPage_Help.Controls.Add(Me.LinkLabel1)
+        Me.TabPage_Help.Controls.Add(Me.Label39)
         Me.TabPage_Help.Controls.Add(Me.Label34)
         Me.TabPage_Help.Controls.Add(Me.Label33)
         Me.TabPage_Help.Location = New System.Drawing.Point(4, 22)
@@ -1545,6 +1556,35 @@ Partial Class Main
         Me.TabPage_Help.Size = New System.Drawing.Size(720, 347)
         Me.TabPage_Help.TabIndex = 8
         Me.TabPage_Help.Text = "Hilfe"
+        '
+        'LinkLabel2
+        '
+        Me.LinkLabel2.AutoSize = True
+        Me.LinkLabel2.Location = New System.Drawing.Point(4, 111)
+        Me.LinkLabel2.Name = "LinkLabel2"
+        Me.LinkLabel2.Size = New System.Drawing.Size(102, 13)
+        Me.LinkLabel2.TabIndex = 5
+        Me.LinkLabel2.TabStop = True
+        Me.LinkLabel2.Text = "Google-USB Treiber"
+        '
+        'LinkLabel1
+        '
+        Me.LinkLabel1.AutoSize = True
+        Me.LinkLabel1.Location = New System.Drawing.Point(3, 98)
+        Me.LinkLabel1.Name = "LinkLabel1"
+        Me.LinkLabel1.Size = New System.Drawing.Size(121, 13)
+        Me.LinkLabel1.TabIndex = 4
+        Me.LinkLabel1.TabStop = True
+        Me.LinkLabel1.Text = "allgemeiner ADB-Treiber"
+        '
+        'Label39
+        '
+        Me.Label39.AutoSize = True
+        Me.Label39.Location = New System.Drawing.Point(4, 85)
+        Me.Label39.Name = "Label39"
+        Me.Label39.Size = New System.Drawing.Size(375, 13)
+        Me.Label39.TabIndex = 2
+        Me.Label39.Text = "Eventuell müssen noch Treiber für das jeweilige Smartphone installiert werden!"
         '
         'Label34
         '
@@ -1591,6 +1631,26 @@ Partial Class Main
         'OpenFile_Backup
         '
         Me.OpenFile_Backup.Filter = "Backup|*.ab"
+        '
+        'Button_Delete
+        '
+        Me.Button_Delete.Location = New System.Drawing.Point(314, 32)
+        Me.Button_Delete.Name = "Button_Delete"
+        Me.Button_Delete.Size = New System.Drawing.Size(108, 23)
+        Me.Button_Delete.TabIndex = 8
+        Me.Button_Delete.Text = "Löschen"
+        Me.Button_Delete.UseVisualStyleBackColor = True
+        '
+        'Label40
+        '
+        Me.Label40.AutoSize = True
+        Me.Label40.Font = New System.Drawing.Font("Microsoft Sans Serif", 10.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.Label40.ForeColor = System.Drawing.Color.Red
+        Me.Label40.Location = New System.Drawing.Point(4, 149)
+        Me.Label40.Name = "Label40"
+        Me.Label40.Size = New System.Drawing.Size(258, 17)
+        Me.Label40.TabIndex = 8
+        Me.Label40.Text = "Dies kann das Gerät beschädigen!"
         '
         'Main
         '
@@ -1796,5 +1856,10 @@ Partial Class Main
     Friend WithEvents RadioButton_purple As System.Windows.Forms.RadioButton
     Friend WithEvents RadioButton_blue As System.Windows.Forms.RadioButton
     Friend WithEvents RadioButton_green As System.Windows.Forms.RadioButton
+    Friend WithEvents LinkLabel1 As System.Windows.Forms.LinkLabel
+    Friend WithEvents Label39 As System.Windows.Forms.Label
+    Friend WithEvents LinkLabel2 As System.Windows.Forms.LinkLabel
+    Friend WithEvents Button_Delete As System.Windows.Forms.Button
+    Friend WithEvents Label40 As System.Windows.Forms.Label
 
 End Class

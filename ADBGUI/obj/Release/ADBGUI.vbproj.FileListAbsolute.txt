@@ -7,7 +7,6 @@ S:\Dokumente\Visual Studio 2013\Projects\ADBGUI\ADBGUI\bin\Release\ADBGUI.pdb
 S:\Dokumente\Visual Studio 2013\Projects\ADBGUI\ADBGUI\obj\Release\ADBGUI.vbprojResolveAssemblyReference.cache
 S:\Dokumente\Visual Studio 2013\Projects\ADBGUI\ADBGUI\obj\Release\ADBGUI.Main.resources
 S:\Dokumente\Visual Studio 2013\Projects\ADBGUI\ADBGUI\obj\Release\ADBGUI.Resources.resources
-S:\Dokumente\Visual Studio 2013\Projects\ADBGUI\ADBGUI\obj\Release\ADBGUI.ScreenView.resources
 S:\Dokumente\Visual Studio 2013\Projects\ADBGUI\ADBGUI\obj\Release\ADBGUI.SplashScreen1.resources
 S:\Dokumente\Visual Studio 2013\Projects\ADBGUI\ADBGUI\obj\Release\ADBGUI.vbproj.GenerateResource.Cache
 S:\Dokumente\Visual Studio 2013\Projects\ADBGUI\ADBGUI\obj\Release\ADBGUI.TrustInfo.xml
