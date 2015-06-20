@@ -50,7 +50,7 @@
           <dsig:Transform Algorithm="urn:schemas-microsoft-com:HashTransforms.Identity" />
         </dsig:Transforms>
         <dsig:DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha256" />
-        <dsig:DigestValue>yQqF6nmn2ZneGJatvHwuWZ+ZfXNMRQpuxmR60uCdIi4=</dsig:DigestValue>
+        <dsig:DigestValue>T5icR484vDD/j6hw5LeyJ4kKX6wMfLDjAcR35BU7zrA=</dsig:DigestValue>
       </hash>
     </dependentAssembly>
   </dependency>
@@ -66,13 +66,13 @@
       </hash>
     </dependentAssembly>
   </dependency>
-  <file name="ADBGUI.exe.config" size="1276">
+  <file name="ADBGUI.exe.config" size="231">
     <hash>
       <dsig:Transforms>
         <dsig:Transform Algorithm="urn:schemas-microsoft-com:HashTransforms.Identity" />
       </dsig:Transforms>
       <dsig:DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha256" />
-      <dsig:DigestValue>WnNfORTCjwWXBvrP2NLJAeDGK91B3ox6GZivT2TTry4=</dsig:DigestValue>
+      <dsig:DigestValue>3kMR14I492SGHM3ENkovtFG0+GRFOanBVwmyCFv3r1w=</dsig:DigestValue>
     </hash>
   </file>
   <file name="Background_blue.jpg" size="37089">

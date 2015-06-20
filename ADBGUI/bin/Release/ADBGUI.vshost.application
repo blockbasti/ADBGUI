@@ -7,14 +7,14 @@
     <framework targetVersion="4.5" profile="Full" supportedRuntime="4.0.30319" />
   </compatibleFrameworks>
   <dependency>
-    <dependentAssembly dependencyType="install" codebase="ADBGUI.exe.manifest" size="8416">
+    <dependentAssembly dependencyType="install" codebase="ADBGUI.exe.manifest" size="8415">
       <assemblyIdentity name="ADBGUI.exe" version="1.0.0.0" publicKeyToken="0000000000000000" language="de-DE" processorArchitecture="msil" type="win32" />
       <hash>
         <dsig:Transforms>
           <dsig:Transform Algorithm="urn:schemas-microsoft-com:HashTransforms.Identity" />
         </dsig:Transforms>
         <dsig:DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha256" />
-        <dsig:DigestValue>4geyu3Oo3BDgoq0Om5/dwA00Fm43jWLOCwhYU7TUgEU=</dsig:DigestValue>
+        <dsig:DigestValue>GJPRY12cTeSNEakIc7YMKM7FzbbUraBH3xU1TV5Y88Q=</dsig:DigestValue>
       </hash>
     </dependentAssembly>
   </dependency>
